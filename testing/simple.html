@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MyTest</title>
+  </head>
+
+  <body>
+	<h1> Hello </h1>
+	<h2 id="insert"></h2>
+	<h3 id="changeme">Heading 3</h3>
+	<button onClick="alert('button has been clicked')">Click Me</button>
+	<button onClick="buttonSubmit()">Click Me 2</button>
+     	<script>
+			function buttonSubmit() {
+				console.log("hello jeff");
+			}		
+		
+			var epic_element = document.getElementById("insert");
+			epic_element.innerHTML = "Hello jeff";
+		</script>
+			
+		<script>	
+			document.getElementById("changeme").style.color = "yellow";
+			
+        </script>
+	</body>
+</html>
