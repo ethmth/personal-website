@@ -17,9 +17,6 @@ const customTheme = {
     },
   },
   fonts: {
-    // body: "Inter var, sans-serif",
-    // heading: "Inter var, sans-serif",
-    // mono: "Fira Code, monospace",
     body: "open-sans",
     heading: "roboto",
     mono: "roboto",

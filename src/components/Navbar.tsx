@@ -21,12 +21,7 @@ const Navbar: React.FC = () => {
       <StickNav>
         <Box>
           <NextLink href="/" passHref>
-            <Button
-              as="a"
-              variant="ghost"
-              p={[1, 2, 4]}
-              _hover={{ backgroundColor: navHoverBg[colorMode] }}
-            >
+            <Button as="a" variant="ghost" p={[1, 2, 4]}>
               Home
             </Button>
           </NextLink>
