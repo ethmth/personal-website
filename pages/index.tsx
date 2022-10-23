@@ -14,11 +14,12 @@ import {
   Switch,
 } from "@chakra-ui/react";
 
+import Container from "../src/components/Container";
+
 const Home: NextPage = () => {
   return (
     <>
-      <Header />
-      <Heading> Hi, my name is Ethan </Heading>
+      <Container>Hi what happens here?</Container>
     </>
   );
 };
