@@ -1095,6 +1095,11 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
+"@fontsource/open-sans@^4.5.13":
+  "integrity" "sha512-/UzqP7ZFk145XAq8KG4pvFPP7UQhtreDGXgqXZjagCDreKxcrhwn/x7DYz9rPcycWkLUVApIybcoczGZiM0cRg=="
+  "resolved" "https://registry.npmjs.org/@fontsource/open-sans/-/open-sans-4.5.13.tgz"
+  "version" "4.5.13"
+
 "@fontsource/roboto@^4.5.8":
   "integrity" "sha512-CnD7zLItIzt86q4Sj3kZUiLcBk1dSk81qcqgMGaZe7SQ1P8hFNxhMl5AZthK1zrDM5m74VVhaOpuMGIL4gagaA=="
   "resolved" "https://registry.npmjs.org/@fontsource/roboto/-/roboto-4.5.8.tgz"

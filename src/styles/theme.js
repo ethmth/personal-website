@@ -1,6 +1,7 @@
 import { theme } from "@chakra-ui/react";
 
 import "@fontsource/roboto";
+import "@fontsource/open-sans";
 
 const customTheme = {
   ...theme,
@@ -10,18 +11,18 @@ const customTheme = {
   colors: {
     ...theme.colors,
     brand: {
-      900: "#1a365d",
-      800: "#153e75",
-      700: "#2a69ac",
+      //900: "#1a365d",
+      //800: "#153e75",
+      //700: "#2a69ac",
     },
   },
   fonts: {
-    body: "Inter var, sans-serif",
-    heading: "Inter var, sans-serif",
-    mono: "Fira Code, monospace",
-    // body: "@fontsource/roboto",
-    // heading: "roboto",
-    // mono: "roboto",
+    // body: "Inter var, sans-serif",
+    // heading: "Inter var, sans-serif",
+    // mono: "Fira Code, monospace",
+    body: "open-sans",
+    heading: "roboto",
+    mono: "roboto",
   },
   fontSizes: {
     xs: "12px",

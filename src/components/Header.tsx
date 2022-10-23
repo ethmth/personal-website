@@ -1,5 +1,10 @@
+import { useState } from "react";
+
 const Header: React.FC = () => {
-  return <div>Header</div>;
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+  return <div>Hello</div>;
 };
 
 export default Header;
