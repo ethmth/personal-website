@@ -38,7 +38,7 @@ const Home: NextPage = () => {
             max-width="700px"
           >
             <Heading as="h1" size="4xl" mb={4}>
-              Hi, I'm Ethan Thomas
+              Hi, I am Ethan Thomas
             </Heading>
             {/* <Text color={colorSecondary}>Lorem ipsum</Text> */}
             <Resume />
