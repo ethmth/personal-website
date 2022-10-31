@@ -57,7 +57,7 @@ const Navbar: React.FC<BGColor> = ({ light, dark }: BGColor) => {
               Home
             </Button>
           </NextLink>
-          <NextLink href="/blog" passHref>
+          {/* <NextLink href="/blog" passHref>
             <Button
               as="a"
               variant="ghost"
@@ -66,7 +66,7 @@ const Navbar: React.FC<BGColor> = ({ light, dark }: BGColor) => {
             >
               Blog
             </Button>
-          </NextLink>
+          </NextLink> */}
         </Box>
         <DarkModeSwitch />
       </StickNav>

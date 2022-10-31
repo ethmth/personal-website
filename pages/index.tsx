@@ -37,8 +37,10 @@ const Home: NextPage = () => {
             alignItems="flex-start"
             max-width="700px"
           >
-            <Heading mb={2}>Hi, I'm Ethan Thomas</Heading>
-            <Text color={colorSecondary}>Lorem ipsum</Text>
+            <Heading as="h1" size="4xl" mb={4}>
+              Hi, I'm Ethan Thomas
+            </Heading>
+            {/* <Text color={colorSecondary}>Lorem ipsum</Text> */}
             <Resume />
           </Flex>
         </Stack>
