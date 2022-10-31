@@ -3,6 +3,7 @@
 // import raw from "raw.macro";
 
 import React from "react";
+// import "../styles/resume.module.css";
 // import { resume } from "../static/resume.txt";
 
 const Resume: React.FC = () => {
@@ -30,7 +31,21 @@ const Resume: React.FC = () => {
   return (
     <>
       {/* <h1>Hello World</h1> */}
+      {/* <div> */}
       <div dangerouslySetInnerHTML={{ __html: htmlString }} />
+      <style jsx>
+        {`
+          div {
+            background-color: yellow;
+          }
+          .list {
+            background-color: blue;
+          }
+        `}
+      </style>
+      {/* <strong>Hello Jeff</strong> */}
+      {/* <div dangerouslySetInnerHTML={{ __html: htmlString }} /> */}
+      {/* </div> */}
     </>
   );
 };
