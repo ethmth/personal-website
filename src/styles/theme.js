@@ -17,7 +17,8 @@ const customTheme = {
     },
   },
   fonts: {
-    body: "open-sans",
+    // body: "open-sans",
+    body: "roboto",
     heading: "roboto",
     mono: "roboto",
   },
