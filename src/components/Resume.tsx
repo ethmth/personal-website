@@ -31,8 +31,6 @@ const Resume: React.FC = () => {
       <div>
         <div>
           <Heading as="h3">Objective</Heading>
-          {/* <hr /> */}
-
           <Text>
             Student passionate for Linux, automation using Bash and Python, and
             Front-end Development. Seeking a Summer 2023 Software Engineering
@@ -41,36 +39,24 @@ const Resume: React.FC = () => {
         </div>
         <div>
           <Heading as="h3">Education</Heading>
-          {/* <hr /> */}
-          {/* <UnorderedList> */}
-          {/* <ListItem> */}
           <Text>
             <strong>Bachelor of Computer Science (B.S.)</strong>, Columbia
             University (SEAS)
           </Text>
-          {/* </ListItem> */}
-          {/* <ListItem> */}
           <Text>
             Relevant Coursework: Data Structures, Advanced Programming, Linear
             Algebra, Discrete Math
           </Text>
-          {/* </ListItem> */}
-          {/* <ListItem> */}
           <Text>
             Member of Columbia Space Initiative - 2023 NASA Micro-g NExT
             Competition Team Member
           </Text>
-          {/* </ListItem> */}
-          {/* <ListItem> */}
           <Text>
             Member of the Application Development Initiative - DevFest
             (Hackathon) Organizing Committee
           </Text>
-          {/* </ListItem> */}
-          {/* </UnorderedList> */}
         </div>
 
-        {/* <hr /> */}
         <div>
           <Heading as="h3">Skills</Heading>
           <Table>
@@ -108,8 +94,6 @@ const Resume: React.FC = () => {
         </div>
         <div>
           <Heading as="h3">Experience</Heading>
-          {/* <hr /> */}
-          {/* <div className="list"> */}
           <Text>
             <strong>Front-End Software Engineer (Club)</strong> Sep 2021 - May
             2022
@@ -157,12 +141,10 @@ const Resume: React.FC = () => {
         </div>
         <div>
           <Heading as="h3">Projects</Heading>
-          {/* <hr /> */}
-          {/* <div className="list"> */}
           <Text>
             <span>
               All projects available on my GitHub. These are personal projects,
-              but I’ve done C, C++, and Java projects in class.
+              but I've done C, C++, and Java projects in class.
             </span>
           </Text>
           <Text>
@@ -191,8 +173,6 @@ const Resume: React.FC = () => {
         </div>
         <div>
           <Heading as="h3">Extra-Curricular Activities</Heading>
-          {/* <hr /> */}
-          {/* <div className="list"> */}
           <UnorderedList>
             <ListItem>
               <Text>
@@ -207,8 +187,6 @@ const Resume: React.FC = () => {
         </div>
         <div>
           <Heading as="h3">Leadership</Heading>
-          {/* <hr /> */}
-          {/* <div className="list"> */}
           <UnorderedList>
             <ListItem>
               <Text>
