@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="5"
+   height="5"
+   viewBox="0 0 5 5"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="arrow_logo.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview261"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="128"
+     inkscape:cx="2.8828125"
+     inkscape:cy="3.6953125"
+     inkscape:window-width="2560"
+     inkscape:window-height="1367"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid384"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs256" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.946666"
+       id="path4244"
+       cx="2.5039062"
+       cy="2.4960938"
+       r="2.4960938" />
+    <path
+       style="fill:#1b291a;fill-opacity:1"
+       d="M 0.44412451,2.513959 H 3.9184505 c 0,0 0.45565,-3.47432729 -1.5378156,-1.76564199 C 0.38716831,2.457002 0.44412451,2.513959 0.44412451,2.513959 Z"
+       id="path737"
+       inkscape:label="Top" />
+    <path
+       style="fill:#1b291a;fill-opacity:1"
+       d="M 0.47972211,2.898413 C 3.7547025,2.926893 0.7929811,4.066015 0.7929811,4.066015 l 2.2782474,0.711952 0.711952,-1.908032 z"
+       id="path739"
+       inkscape:label="Bottom" />
+    <path
+       style="fill:#ffffff;fill-opacity:1"
+       id="path797"
+       sodipodi:type="arc"
+       sodipodi:cx="2.8825617"
+       sodipodi:cy="2.7845011"
+       sodipodi:rx="0.61583865"
+       sodipodi:ry="0.62651795"
+       sodipodi:start="0"
+       sodipodi:end="3.4453511"
+       sodipodi:arc-type="slice"
+       d="M 3.4984003,2.7845011 A 0.61583865,0.62651795 0 0 1 3.1349948,3.3559668 0.61583865,0.62651795 0 0 1 2.4736684,3.2529903 0.61583865,0.62651795 0 0 1 2.2949167,2.5971041 l 0.587645,0.187397 z"
+       inkscape:label="BottomHole" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1"
+       id="path1414"
+       cx="2.8683224"
+       cy="2.5317574"
+       rx="0.56600201"
+       ry="0.53040439"
+       inkscape:label="TopHole" />
+    <circle
+       style="fill:#1b291a;fill-opacity:1"
+       id="path2475"
+       cx="2.8553152"
+       cy="2.6773882"
+       r="0.41708252"
+       inkscape:label="Middle" />
+    <path
+       style="fill:#ffffff;fill-opacity:1"
+       id="path2546"
+       sodipodi:type="arc"
+       sodipodi:cx="2.8553152"
+       sodipodi:cy="2.6552906"
+       sodipodi:rx="0.27345145"
+       sodipodi:ry="0.27345145"
+       sodipodi:start="3.1415927"
+       sodipodi:end="6.2831853"
+       sodipodi:arc-type="slice"
+       d="M 2.5818638,2.6552906 A 0.27345145,0.27345145 0 0 1 2.8553152,2.3818392 0.27345145,0.27345145 0 0 1 3.1287667,2.6552906 H 2.8553152 Z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1"
+       id="path2552"
+       sodipodi:type="arc"
+       sodipodi:cx="2.8525524"
+       sodipodi:cy="2.7464409"
+       sodipodi:rx="0.15467961"
+       sodipodi:ry="0.15467961"
+       sodipodi:start="0"
+       sodipodi:end="3.1415927"
+       sodipodi:arc-type="slice"
+       d="m 3.007232,2.7464409 a 0.15467961,0.15467961 0 0 1 -0.07734,0.1339565 0.15467961,0.15467961 0 0 1 -0.1546796,0 0.15467961,0.15467961 0 0 1 -0.07734,-0.1339565 h 0.1546796 z" />
+    <path
+       style="fill:#ffffff;fill-opacity:1"
+       d="m 2.9457955,2.849786 0.276214,0.182301 0.121534,-0.287262 h -0.370126 z"
+       id="path2554" />
+    <g
+       inkscape:groupmode="layer"
+       id="layer2"
+       inkscape:label="Layer 2"
+       transform="translate(-0.1875,0.015625)" />
+  </g>
+</svg>
