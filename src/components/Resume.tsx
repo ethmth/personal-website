@@ -9,6 +9,8 @@ const Resume: React.FC = () => {
   //   const myHTML = `<h1>John Doe</h1>`;
   const myHTML = require("../static/resume.html");
 
+  const htmlString: string = myHTML.default;
+
   /*
   const showFile = (e) => {
     e.preventDefault();
@@ -20,13 +22,15 @@ const Resume: React.FC = () => {
     reader.readAsText(e.target.files[0]);
   };
   */
+  //   console.log(myHTML);
+  //   console.log(htmlString);
 
   //   const mySafeHTML = DOMPurify.sanitize(myHTML);
 
   return (
     <>
-      <h1>Hello World</h1>
-      <div dangerouslySetInnerHTML={{ __html: myHTML }} />
+      {/* <h1>Hello World</h1> */}
+      <div dangerouslySetInnerHTML={{ __html: htmlString }} />
     </>
   );
 };

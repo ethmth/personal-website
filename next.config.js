@@ -1,7 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: false,
-  swcMinify: true,
-};
+module.exports = {
+  reactStrictMode: true, // was there by default
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.module.rules.push({
+      test: /\.html$/i,
+      loader: "html-loader",
+    });
 
-module.exports = nextConfig;
+    // Important: return the modified config
+    return config;
+  },
+};
