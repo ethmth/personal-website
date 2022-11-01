@@ -1,9 +1,7 @@
 import React from "react";
-import { useColorMode, Button, Flex, Box, Text } from "@chakra-ui/react";
+import { useColorMode, Flex } from "@chakra-ui/react";
 
 import styled from "@emotion/styled";
-
-// import DarkModeSwitch from "../components/DarkModeSwitch";
 
 import { PropsWithChildren } from "react";
 import Navbar from "./Navbar";
@@ -29,10 +27,8 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <>
-      {/* {console.log(typeof bgColor)} */}
       <DivSide>
         <Navbar light={bgColor.light} dark={bgColor.dark} />
-        {/* <DarkModeSwitch /> */}
         <Flex
           as="main"
           justifyContent="center"

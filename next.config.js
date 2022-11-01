@@ -7,7 +7,7 @@ const nextConfig = {
       {
         source: "/resume",
         destination:
-          "https://raw.githubusercontent.com/ethmth/resume/main/resume.pdf",
+          "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf",
         permanent: true,
       },
     ];
