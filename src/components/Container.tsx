@@ -21,22 +21,30 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
     dark: "#171717",
   };
 
+  const DivSide = styled.div`
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+  `;
+
   return (
     <>
-      {console.log(typeof bgColor)}
-      <Navbar light={bgColor.light} dark={bgColor.dark} />
-      {/* <DarkModeSwitch /> */}
-      <Flex
-        as="main"
-        justifyContent="center"
-        flexDirection="column"
-        bg={bgColor[colorMode]}
-        color={color[colorMode]}
-        px={[0, 4, 4]}
-        mt={[4, 8, 8]}
-      >
-        {children}
-      </Flex>
+      {/* {console.log(typeof bgColor)} */}
+      <DivSide>
+        <Navbar light={bgColor.light} dark={bgColor.dark} />
+        {/* <DarkModeSwitch /> */}
+        <Flex
+          as="main"
+          justifyContent="center"
+          flexDirection="column"
+          bg={bgColor[colorMode]}
+          color={color[colorMode]}
+          px={[0, 4, 4]}
+          mt={[4, 8, 8]}
+        >
+          {children}
+        </Flex>
+      </DivSide>
     </>
   );
 };

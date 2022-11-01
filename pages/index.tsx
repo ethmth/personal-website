@@ -9,11 +9,14 @@ import {
   Heading,
   Stack,
   Divider,
+  Image,
 } from "@chakra-ui/react";
 
 import Container from "../src/components/Container";
 
 import Resume from "../src/components/Resume";
+
+// import Face from "../src/images/Ethan.jpg";
 
 const Home: NextPage = () => {
   const { colorMode } = useColorMode();
@@ -23,10 +26,11 @@ const Home: NextPage = () => {
     dark: "gray.400",
   };
 
-  const Div = styled.div`
-    // margin-left: 5vw;
-    // margin-right: 5vw;
-  `;
+  // const DivSide = styled.div`
+  //   margin-left: 5%;
+  //   margin-right: 5%;
+  //   width: 90%;
+  // `;
 
   return (
     <>
@@ -40,22 +44,23 @@ const Home: NextPage = () => {
           justifyContent="center"
           alignItems="flex-start"
           m="0 auto 4rem auto"
-          maxWidth="750px"
+          maxWidth="850px"
           px={2}
         >
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
             alignItems="flex-start"
-            maxWidth="750px"
+            maxWidth="850px"
             // m="5vw 0 0 5vw"
           >
-            <Div>
-              <Heading as="h1" size="4xl" mb={4}>
-                Hi, I am Ethan Thomas
-              </Heading>
-              <Resume />
-            </Div>
+            {/* <DivSide> */}
+            <Image src="../src/images/Ethan.jpg" alt="A Picture of Me" />
+            <Heading as="h1" size="4xl" mb={4}>
+              Hi, I am Ethan Thomas
+            </Heading>
+            <Resume />
+            {/* </DivSide> */}
           </Flex>
         </Stack>
       </Container>
