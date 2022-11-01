@@ -7,6 +7,14 @@ import { useColorMode } from "@chakra-ui/react";
 
 const GlobalStyle: React.FC<PropsWithChildren> = ({ children }) => {
   const { colorMode } = useColorMode();
+
+  const bgColor = {
+    light: "white",
+    // dark: "#171717",
+    // dark: "#07175a",
+    dark: "#171717",
+  };
+
   return (
     <>
       <Global
@@ -27,7 +35,7 @@ const GlobalStyle: React.FC<PropsWithChildren> = ({ children }) => {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: ${colorMode === "light" ? "white" : "#171717"};
+            background: ${colorMode === "light" ? bgColor.light : bgColor.dark};
           }
         `}
       />

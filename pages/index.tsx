@@ -1,14 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { useColorMode, Flex, Heading, Stack, Image } from "@chakra-ui/react";
-// import { Image } from "@chakra-ui/image";
+import { useColorMode, Flex, Stack } from "@chakra-ui/react";
 
 import Container from "../src/components/Container";
 
 import Resume from "../src/components/Resume";
 
-// import Profile from "../src/images/Ethan.jpg";
+import PictureAndName from "../src/components/PictureAndName";
 
 const Home: NextPage = () => {
   const { colorMode } = useColorMode();
@@ -39,12 +38,7 @@ const Home: NextPage = () => {
             alignItems="flex-start"
             maxWidth="850px"
           >
-            {/* <Image src="../src/images/Ethan" alt="A Picture of Me" /> */}
-            <Image src="/images/Ethan.jpg" alt="A Picture of Me" />
-            {/* <Image src="https://bit.ly/dan-abramov" alt="A Picture of Me" /> */}
-            <Heading as="h1" size="4xl" mb={4}>
-              Hi, I am Ethan Thomas
-            </Heading>
+            <PictureAndName />
             <Resume />
           </Flex>
         </Stack>

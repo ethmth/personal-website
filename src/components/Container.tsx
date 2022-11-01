@@ -6,6 +6,14 @@ import styled from "@emotion/styled";
 import { PropsWithChildren } from "react";
 import Navbar from "./Navbar";
 
+// import bgColor from "../../pages/_app";
+// import GlobalStyle from "../../pages/_app";
+
+// interface BGColor {
+//   light: string;
+//   dark: string;
+// }
+
 const Container: React.FC<PropsWithChildren> = ({ children }) => {
   const { colorMode } = useColorMode();
 
@@ -15,14 +23,21 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
   };
 
   const bgColor = {
-    light: "white",
-    dark: "#171717",
+    // light: "white",
+    // light: "#cdced0",
+    light: "#ecedee",
+    // dark: "#171717",
+    // dark: "red",
+    // dark: "#07175a",
+    // dark: "#343a40",
+    dark: "#202020",
   };
 
   const DivSide = styled.div`
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
+    // background-color: yellow;
   `;
 
   return (
@@ -37,6 +52,7 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
           color={color[colorMode]}
           px={[0, 4, 4]}
           mt={[4, 8, 8]}
+          borderRadius={20}
         >
           {children}
         </Flex>

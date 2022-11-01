@@ -45,6 +45,7 @@ const Navbar: React.FC<BGColor> = ({ light, dark }: BGColor) => {
         mt={8}
         mb={[0, 0, 8]}
         mx="auto"
+        borderRadius={20}
       >
         <Box>
           <NextLink href="/" passHref>
