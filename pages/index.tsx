@@ -31,12 +31,14 @@ const Home: NextPage = () => {
           m="0 auto 4rem auto"
           maxWidth="850px"
           px={2}
+          backgroundColor="yellow"
         >
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
             alignItems="flex-start"
             maxWidth="850px"
+            backgroundColor="purple"
           >
             <PictureAndName />
             <Resume />

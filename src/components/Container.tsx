@@ -37,7 +37,7 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
-    // background-color: yellow;
+    background-color: blue;
   `;
 
   return (
@@ -53,6 +53,7 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
           px={[0, 4, 4]}
           mt={[4, 8, 8]}
           borderRadius={20}
+          backgroundColor="orange"
         >
           {children}
         </Flex>

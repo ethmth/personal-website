@@ -12,15 +12,16 @@ const PictureAndName: React.FC = () => {
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
-        maxWidth="50%"
+        // maxWidth="50%"
         // width="100%"
         // px={[2, 6, 6]}
         // py={2}
         // mt={8}
         // mb={[0, 0, 8]}
         // mx="auto"
+        backgroundColor="green"
       >
-        <Heading as="h1" size="4xl" mb={4} mr={10}>
+        <Heading as="h1" size="4xl" mb={4} mr={10} maxWidth="50%">
           Hi, I am Ethan Thomas
         </Heading>
         <Image
@@ -29,6 +30,8 @@ const PictureAndName: React.FC = () => {
           mt={5}
           src="/images/Ethan.jpg"
           alt="A Picture of Me"
+          maxWidth="50%"
+          // mr={2}
         />
       </Horizontal>
     </>

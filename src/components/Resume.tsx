@@ -25,6 +25,8 @@ import Link from "next/link";
 
 import React from "react";
 
+import Bubble from "./Bubble";
+
 const Resume: React.FC = () => {
   return (
     <>
@@ -92,7 +94,7 @@ const Resume: React.FC = () => {
             </Tbody>
           </Table>
         </div>
-        <div>
+        <Bubble>
           <Heading as="h3">Experience</Heading>
           <Text>
             <strong>Front-End Software Engineer (Club)</strong> Sep 2021 - May
@@ -138,7 +140,7 @@ const Resume: React.FC = () => {
               </Text>
             </ListItem>
           </UnorderedList>
-        </div>
+        </Bubble>
         <div>
           <Heading as="h3">Projects</Heading>
           <Text>
