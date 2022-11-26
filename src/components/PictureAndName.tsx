@@ -1,7 +1,9 @@
-import { Image, Heading, Flex } from "@chakra-ui/react";
+import { Image, Heading, Flex, useColorMode } from "@chakra-ui/react";
 import styled from "@emotion/styled";
+import { bgColor } from "../styles/colors";
 
 const PictureAndName: React.FC = () => {
+  const { colorMode } = useColorMode();
   const Horizontal = styled(Flex)`
     top: 0;
   `;
@@ -19,7 +21,8 @@ const PictureAndName: React.FC = () => {
         // mt={8}
         // mb={[0, 0, 8]}
         // mx="auto"
-        // backgroundColor="green"
+        backgroundColor={bgColor[colorMode]}
+        borderRadius="50"
       >
         <Heading as="h1" size="4xl" mb={4} mr={10} maxWidth="50%">
           Hi, I am Ethan Thomas
@@ -28,7 +31,7 @@ const PictureAndName: React.FC = () => {
           ml={10}
           //   maxWidth="300px"
           mt={5}
-          src="/images/Ethann.jpg"
+          src="/images/Ethan.jpg"
           alt="A Picture of Me"
           maxWidth="50%"
           // mr={2}

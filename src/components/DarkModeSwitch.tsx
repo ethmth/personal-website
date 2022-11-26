@@ -1,14 +1,12 @@
 import { useColorMode, IconButton } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import React from "react";
+import { color } from "../styles/colors";
 
 const DarkModeSwitch: React.FC = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const iconColor = color;
 
-  const iconColor = {
-    light: "black",
-    dark: "white",
-  };
   return (
     <IconButton
       aria-label="Toggle dark mode"

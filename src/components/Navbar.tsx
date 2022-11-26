@@ -2,9 +2,7 @@ import styled from "@emotion/styled";
 import { useColorMode, Button, Flex, Box } from "@chakra-ui/react";
 import NextLink from "next/link";
 import DarkModeSwitch from "../components/DarkModeSwitch";
-import { PropsWithChildren } from "react";
-import { useState } from "react";
-import { bgColor } from "../styles/colors";
+import { bgColor, navHoverBg } from "../styles/colors";
 
 const Navbar: React.FC = () => {
   const { colorMode } = useColorMode();
@@ -16,11 +14,6 @@ const Navbar: React.FC = () => {
     backdrop=filter: saturate(180%) blur(20px),
     transition: height .5s, line-height: .5s;
     `;
-
-  const navHoverBg = {
-    light: "gray.600",
-    dark: "gray.300",
-  };
 
   return (
     <>

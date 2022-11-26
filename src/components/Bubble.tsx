@@ -1,14 +1,10 @@
 import styled from "@emotion/styled";
 import { useColorMode, Flex } from "@chakra-ui/react";
 import { PropsWithChildren } from "react";
+import { bgColor } from "../styles/colors";
 
 const Bubble: React.FC<PropsWithChildren> = ({ children }) => {
   const { colorMode } = useColorMode();
-
-  const bgColor = {
-    light: "#ecedee",
-    dark: "#202020",
-  };
 
   const BubbleDiv = styled.div`
     background-color: ${bgColor[colorMode]};
