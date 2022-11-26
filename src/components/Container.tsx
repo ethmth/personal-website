@@ -14,13 +14,15 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
   const DivFull = styled.div`
     margin: 0;
     width: 100%;
-    background-color: ${bgColor[colorMode]};
+    // background-color: ${bgColor[colorMode]};
+    // background-color=purple
   `;
 
   const DivSide = styled.div`
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
+    // background-color=blue
   `;
 
   return (
@@ -36,6 +38,7 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
           px={[0, 4, 4]}
           mt={[4, 8, 8]}
           borderRadius={20}
+          // backgroundColor="green"
         >
           {children}
         </Flex>

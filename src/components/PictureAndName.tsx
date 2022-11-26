@@ -1,6 +1,7 @@
 import { Image, Heading, Flex, useColorMode } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { bgColor } from "../styles/colors";
+import { useState, useEffect } from "react";
 
 const PictureAndName: React.FC = () => {
   const { colorMode } = useColorMode();
@@ -8,10 +9,32 @@ const PictureAndName: React.FC = () => {
     top: 0;
   `;
 
+  const isClientMobile = () => {
+    // let mql = window.matchMedia("(max-width: 650px)");
+    // if (mql.matches) {
+    //   return true;
+    // }
+    // return false;
+
+    return typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 650px)").matches
+      ? true
+      : false;
+  };
+
+  const [mobile, setMobile] = useState(isClientMobile());
+
+  const useEffect = () => {
+    setMobile(isClientMobile());
+    // window.addEventListener("resize", this._handleWindowResize);
+  };
+
   return (
     <>
+      {/* <Flex> */}
       <Horizontal
-        flexDirection="row"
+        // flexDirection="row"
+        flexDirection={mobile ? "column" : "row"}
         justifyContent="space-between"
         alignItems="center"
         maxWidth="100%"
@@ -20,6 +43,7 @@ const PictureAndName: React.FC = () => {
         mt={8}
         mx="auto"
         backgroundColor={bgColor[colorMode]}
+        // backgroundColor="red"
         borderRadius="50"
       >
         <Heading as="h1" size="4xl" mb={4} mr={10} maxWidth="50%">
@@ -34,6 +58,7 @@ const PictureAndName: React.FC = () => {
           mr={2}
         />
       </Horizontal>
+      {/* </Flex> */}
     </>
   );
 };

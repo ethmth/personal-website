@@ -4,16 +4,11 @@ import theme from "../src/styles/theme";
 import { Global, css } from "@emotion/react";
 import { PropsWithChildren } from "react";
 import { useColorMode } from "@chakra-ui/react";
+import { conColor } from "../src/styles/colors";
 
 const GlobalStyle: React.FC<PropsWithChildren> = ({ children }) => {
   const { colorMode } = useColorMode();
-
-  const bgColor = {
-    light: "white",
-    // dark: "#171717",
-    // dark: "#07175a",
-    dark: "#171717",
-  };
+  const bgColor = conColor;
 
   return (
     <>
