@@ -28,26 +28,19 @@ const Bubble: React.FC<PropsWithChildren> = ({ children }) => {
   const BubbleDiv = styled.div`
     background-color: ${bgColor[colorMode]};
     padding-top: 1.5em;
-    padding-bottom: 2em;
-    margin-top: 1em;
+    padding-bottom: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
     border-radius: 30px;
     width: 100%;
-  `;
 
-  const ChildDiv = styled.div`
-    margin-left: 1em;
-    margin-right: 1em;
     font-size: ${mobile ? `12px` : `16px`};
     h3 {
       font-size: ${mobile ? `24px` : `32px`};
     }
   `;
 
-  return (
-    <BubbleDiv>
-      <ChildDiv>{children}</ChildDiv>
-    </BubbleDiv>
-  );
+  return <BubbleDiv>{children}</BubbleDiv>;
 };
 
 export default Bubble;
