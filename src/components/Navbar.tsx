@@ -2,13 +2,9 @@ import styled from "@emotion/styled";
 import { useColorMode, Button, Flex, Box } from "@chakra-ui/react";
 import NextLink from "next/link";
 import DarkModeSwitch from "../components/DarkModeSwitch";
+import { bgColor, navHoverBg, color } from "../styles/colors";
 
-interface BGColor {
-  light: string;
-  dark: string;
-}
-
-const Navbar: React.FC<BGColor> = ({ light, dark }: BGColor) => {
+const Navbar: React.FC = () => {
   const { colorMode } = useColorMode();
 
   const StickNav = styled(Flex)`
@@ -19,16 +15,6 @@ const Navbar: React.FC<BGColor> = ({ light, dark }: BGColor) => {
     transition: height .5s, line-height: .5s;
     `;
 
-  const navHoverBg = {
-    light: "gray.600",
-    dark: "gray.300",
-  };
-
-  const bgColor = {
-    light: light,
-    dark: dark,
-  };
-
   return (
     <>
       <StickNav
@@ -36,7 +22,6 @@ const Navbar: React.FC<BGColor> = ({ light, dark }: BGColor) => {
         justifyContent="space-between"
         alignItems="center"
         maxWidth="800px"
-        minWidth="356px"
         width="100%"
         bg={bgColor[colorMode]}
         as="nav"
@@ -45,28 +30,35 @@ const Navbar: React.FC<BGColor> = ({ light, dark }: BGColor) => {
         mt={8}
         mb={[0, 0, 8]}
         mx="auto"
+        borderRadius={20}
       >
         <Box>
           <NextLink href="/" passHref>
             <Button
+              ml={5}
+              mr={5}
               as="a"
               variant="ghost"
               p={[1, 2, 4]}
               _hover={{ backgroundColor: navHoverBg[colorMode] }}
+              color={color[colorMode]}
             >
               Home
             </Button>
           </NextLink>
-          {/* <NextLink href="/blog" passHref>
+          <NextLink href="/resume" passHref>
             <Button
+              ml={5}
+              mr={5}
               as="a"
               variant="ghost"
               p={[1, 2, 4]}
               _hover={{ backgroundColor: navHoverBg[colorMode] }}
+              color={color[colorMode]}
             >
-              Blog
+              Resume
             </Button>
-          </NextLink> */}
+          </NextLink>
         </Box>
         <DarkModeSwitch />
       </StickNav>

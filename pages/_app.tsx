@@ -1,13 +1,15 @@
-import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
 import theme from "../src/styles/theme";
 import { Global, css } from "@emotion/react";
 import { PropsWithChildren } from "react";
 import { useColorMode } from "@chakra-ui/react";
+import { conColor } from "../src/styles/colors";
 
 const GlobalStyle: React.FC<PropsWithChildren> = ({ children }) => {
   const { colorMode } = useColorMode();
+  const bgColor = conColor;
+
   return (
     <>
       <Global
@@ -28,7 +30,7 @@ const GlobalStyle: React.FC<PropsWithChildren> = ({ children }) => {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: ${colorMode === "light" ? "white" : "#171717"};
+            background: ${colorMode === "light" ? bgColor.light : bgColor.dark};
           }
         `}
       />
@@ -41,7 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider resetCSS theme={theme}>
       <ColorModeProvider
-        options={{ initialColorMode: "light", useSystemColorMode: true }}
+        options={{ initialColorMode: "dark", useSystemColorMode: false }}
       >
         <GlobalStyle>
           <Component {...pageProps}></Component>
