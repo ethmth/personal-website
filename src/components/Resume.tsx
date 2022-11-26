@@ -145,7 +145,7 @@ const Resume: React.FC = () => {
         <Text>
           <span>
             All projects available on my GitHub. These are personal projects,
-            but I've done C, C++, and Java projects in class.
+            but I&apos;ve done C, C++, and Java projects in class.
           </span>
         </Text>
         <Text>

@@ -10,7 +10,7 @@ export const conColor = {
 
 export const color = {
   light: "black",
-  dark: "white",
+  dark: "gray.200",
 };
 
 export const navHoverBg = {

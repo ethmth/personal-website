@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { useColorMode, Button, Flex, Box } from "@chakra-ui/react";
 import NextLink from "next/link";
 import DarkModeSwitch from "../components/DarkModeSwitch";
-import { bgColor, navHoverBg } from "../styles/colors";
+import { bgColor, navHoverBg, color } from "../styles/colors";
 
 const Navbar: React.FC = () => {
   const { colorMode } = useColorMode();
@@ -40,6 +40,7 @@ const Navbar: React.FC = () => {
               variant="ghost"
               p={[1, 2, 4]}
               _hover={{ backgroundColor: navHoverBg[colorMode] }}
+              color={color[colorMode]}
             >
               Home
             </Button>
@@ -50,6 +51,7 @@ const Navbar: React.FC = () => {
               variant="ghost"
               p={[1, 2, 4]}
               _hover={{ backgroundColor: navHoverBg[colorMode] }}
+              color={color[colorMode]}
             >
               Resume
             </Button>

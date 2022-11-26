@@ -23,7 +23,7 @@ const PictureAndName: React.FC = () => {
         borderRadius="50"
       >
         <Heading as="h1" size="4xl" mb={4} mr={10} maxWidth="50%">
-          Hi, I am Ethan Thomas
+          Hi, I&apos;m Ethan Thomas
         </Heading>
         <Image
           ml={10}
