@@ -13,16 +13,11 @@ const Home: NextPage = () => {
   const { colorMode } = useColorMode();
 
   useEffect(() => {
-    // navigate("/");
-    // console.log("navigate");
-    // window.open("/", "_blank");
-    // window.location.href =
-    // "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf";
     window.open(
       "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf",
       "_blank"
     );
-    window.location.href = "/";
+    // window.location.href = "/";
   });
 
   return (
@@ -40,9 +35,8 @@ const Home: NextPage = () => {
           maxWidth="850px"
           px={2}
         >
-          {/* <Resume /> */}
-          <Text>
-            To view my pdf resume, please click{" "}
+          <Text>To view and download my pdf resume, please click</Text>
+          <Text as="u">
             <a
               target="_blank"
               rel="noreferrer"
@@ -51,6 +45,7 @@ const Home: NextPage = () => {
               here
             </a>
           </Text>
+          <Resume />
         </Stack>
       </Container>
     </>
