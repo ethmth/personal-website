@@ -33,15 +33,21 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
     dark: "#202020",
   };
 
+  const DivFull = styled.div`
+    margin: 0;
+    width: 100%;
+    // background-color: orange;
+  `;
+
   const DivSide = styled.div`
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
-    background-color: blue;
+    // background-color: blue;
   `;
 
   return (
-    <>
+    <DivFull>
       <DivSide>
         <Navbar light={bgColor.light} dark={bgColor.dark} />
         <Flex
@@ -53,12 +59,12 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
           px={[0, 4, 4]}
           mt={[4, 8, 8]}
           borderRadius={20}
-          backgroundColor="orange"
+          // backgroundColor="orange"
         >
           {children}
         </Flex>
       </DivSide>
-    </>
+    </DivFull>
   );
 };
 

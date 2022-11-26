@@ -31,15 +31,15 @@ const Resume: React.FC = () => {
   return (
     <>
       <div>
-        <div>
+        <Bubble>
           <Heading as="h3">Objective</Heading>
           <Text>
             Student passionate for Linux, automation using Bash and Python, and
             Front-end Development. Seeking a Summer 2023 Software Engineering
             internship.
           </Text>
-        </div>
-        <div>
+        </Bubble>
+        <Bubble>
           <Heading as="h3">Education</Heading>
           <Text>
             <strong>Bachelor of Computer Science (B.S.)</strong>, Columbia
@@ -57,9 +57,9 @@ const Resume: React.FC = () => {
             Member of the Application Development Initiative - DevFest
             (Hackathon) Organizing Committee
           </Text>
-        </div>
+        </Bubble>
 
-        <div>
+        <Bubble>
           <Heading as="h3">Skills</Heading>
           <Table>
             <Tbody>
@@ -93,7 +93,7 @@ const Resume: React.FC = () => {
               </Tr>
             </Tbody>
           </Table>
-        </div>
+        </Bubble>
         <Bubble>
           <Heading as="h3">Experience</Heading>
           <Text>
@@ -141,7 +141,7 @@ const Resume: React.FC = () => {
             </ListItem>
           </UnorderedList>
         </Bubble>
-        <div>
+        <Bubble>
           <Heading as="h3">Projects</Heading>
           <Text>
             <span>
@@ -172,8 +172,8 @@ const Resume: React.FC = () => {
               for network control using Python, Flask, and Docker.
             </span>
           </Text>
-        </div>
-        <div>
+        </Bubble>
+        <Bubble>
           <Heading as="h3">Extra-Curricular Activities</Heading>
           <UnorderedList>
             <ListItem>
@@ -186,8 +186,8 @@ const Resume: React.FC = () => {
               <Text>Create music using DAW Software (Ardour).</Text>
             </ListItem>
           </UnorderedList>
-        </div>
-        <div>
+        </Bubble>
+        <Bubble>
           <Heading as="h3">Leadership</Heading>
           <UnorderedList>
             <ListItem>
@@ -205,7 +205,7 @@ const Resume: React.FC = () => {
               </Text>
             </ListItem>
           </UnorderedList>
-        </div>
+        </Bubble>
       </div>
     </>
   );
