@@ -34,9 +34,9 @@ const Resume: React.FC = () => {
         <Heading as="h3">Objective</Heading>
         <Text>
           Student passionate for Linux, automation using Bash and Python, and
-          Front-end Development. Seeking a Summer 2023 Software Engineering
-          internship.
+          Front-end Development.
         </Text>
+        <Text>Seeking a Summer 2023 Software Engineering internship.</Text>
       </Bubble>
       <Bubble>
         <Heading as="h3">Education</Heading>
