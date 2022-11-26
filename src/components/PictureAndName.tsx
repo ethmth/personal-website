@@ -9,25 +9,24 @@ const PictureAndName: React.FC = () => {
     top: 0;
   `;
 
-  const isClientMobile = () => {
-    // let mql = window.matchMedia("(max-width: 650px)");
-    // if (mql.matches) {
-    //   return true;
-    // }
-    // return false;
+  const maxWidth = "650px";
 
+  const isClientMobile = () => {
     return typeof window !== "undefined" &&
-      window.matchMedia("(max-width: 650px)").matches
+      window.matchMedia(`(max-width: ${maxWidth})`).matches
       ? true
       : false;
   };
-
   const [mobile, setMobile] = useState(isClientMobile());
 
-  const useEffect = () => {
-    setMobile(isClientMobile());
-    // window.addEventListener("resize", this._handleWindowResize);
-  };
+  useEffect(() => {
+    function handleResize() {
+      console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
+      setMobile(isClientMobile());
+    }
+
+    window.addEventListener("resize", handleResize);
+  });
 
   return (
     <>
