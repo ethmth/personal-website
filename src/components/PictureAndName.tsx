@@ -19,7 +19,7 @@ const PictureAndName: React.FC = () => {
         // mt={8}
         // mb={[0, 0, 8]}
         // mx="auto"
-        backgroundColor="green"
+        // backgroundColor="green"
       >
         <Heading as="h1" size="4xl" mb={4} mr={10} maxWidth="50%">
           Hi, I am Ethan Thomas
@@ -28,7 +28,7 @@ const PictureAndName: React.FC = () => {
           ml={10}
           //   maxWidth="300px"
           mt={5}
-          src="/images/Ethan.jpg"
+          src="/images/Ethann.jpg"
           alt="A Picture of Me"
           maxWidth="50%"
           // mr={2}

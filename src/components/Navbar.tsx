@@ -2,13 +2,11 @@ import styled from "@emotion/styled";
 import { useColorMode, Button, Flex, Box } from "@chakra-ui/react";
 import NextLink from "next/link";
 import DarkModeSwitch from "../components/DarkModeSwitch";
+import { PropsWithChildren } from "react";
+import { useState } from "react";
+import { bgColor } from "../styles/colors";
 
-interface BGColor {
-  light: string;
-  dark: string;
-}
-
-const Navbar: React.FC<BGColor> = ({ light, dark }: BGColor) => {
+const Navbar: React.FC = () => {
   const { colorMode } = useColorMode();
 
   const StickNav = styled(Flex)`
@@ -22,11 +20,6 @@ const Navbar: React.FC<BGColor> = ({ light, dark }: BGColor) => {
   const navHoverBg = {
     light: "gray.600",
     dark: "gray.300",
-  };
-
-  const bgColor = {
-    light: light,
-    dark: dark,
   };
 
   return (
