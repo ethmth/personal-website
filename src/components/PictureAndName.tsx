@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const PictureAndName: React.FC = () => {
   const { colorMode } = useColorMode();
   const Horizontal = styled(Flex)`
-    top: 0;
+    margin-top: 1em;
   `;
 
   const maxWidth = "650px";
@@ -34,18 +34,15 @@ const PictureAndName: React.FC = () => {
         flexDirection={mobile ? "column" : "row"}
         justifyContent="space-between"
         alignItems="center"
-        // maxWidth="100%"
         px={[2, 6, 6]}
         py={2}
-        // mt={8}
         mx="auto"
         backgroundColor={bgColor[colorMode]}
         borderRadius="50"
       >
-        {/* <Heading as="h1" size="4xl" mb={4} mr={10} maxWidth="50%"> */}
         <Heading
           as="h1"
-          size={mobile ? "3xl" : "4xl"}
+          size={mobile ? "2xl" : "4xl"}
           mt={3}
           mb={3}
           mr={5}
@@ -55,12 +52,9 @@ const PictureAndName: React.FC = () => {
           Hi, I&apos;m Ethan Thomas
         </Heading>
         <Image
-          // ml={10}
           maxWidth="50%"
-          // mt={5}
           src="/images/Ethan.jpg"
           alt="A Picture of Me"
-          // mr={2}
           mb={2}
           mt={2}
           mr={2}

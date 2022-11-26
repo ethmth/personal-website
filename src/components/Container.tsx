@@ -13,7 +13,9 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
 
   const DivFull = styled.div`
     margin: 0;
-    width: 100vw;
+    // width: 100vw;
+    minwidth: 100%;
+    width: 100%;
     background-color: red;
   `;
 
@@ -22,25 +24,12 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
     margin-right: 5%;
     width: 90%;
     background-color: orange;
-    // width: 100%;
   `;
 
   return (
     <DivFull>
       <DivSide>
         <Navbar />
-        {/* <Flex
-          as="main"
-          justifyContent="center"
-          flexDirection="column"
-          bg={bgColor[colorMode]}
-          color={color[colorMode]}
-          px={[0, 4, 4]}
-          mt={[4, 8, 8]}
-          borderRadius={20}
-        >
-          {children}
-        </Flex> */}
         {children}
       </DivSide>
     </DivFull>

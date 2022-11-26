@@ -60,7 +60,6 @@ const Resume: React.FC = () => {
 
       <Bubble>
         <Heading as="h3">Skills</Heading>
-        {/* <Table maxWidth="100%"> */}
         <Table>
           <Tbody>
             <Tr className="odd">

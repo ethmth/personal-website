@@ -22,7 +22,6 @@ const Navbar: React.FC = () => {
         justifyContent="space-between"
         alignItems="center"
         maxWidth="800px"
-        // minWidth="356px"
         width="100%"
         bg={bgColor[colorMode]}
         as="nav"
