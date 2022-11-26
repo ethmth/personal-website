@@ -25,21 +25,10 @@ const Home: NextPage = () => {
           alignItems="flex-start"
           m="0 auto 4rem auto"
           maxWidth="850px"
-          // maxWidth="100%"
           px={2}
-          // backgroundColor="yellow"
         >
-          {/* <Flex
-            flexDirection="column"
-            justifyContent="flex-start"
-            alignItems="flex-start"
-            maxWidth="850px"
-            // maxWidth="100%"
-            // backgroundColor="orange"
-          > */}
           <PictureAndName />
           <Resume />
-          {/* </Flex> */}
         </Stack>
       </Container>
     </>

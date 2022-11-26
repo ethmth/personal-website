@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useColorMode, Flex, StyledStepper } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
 import { PropsWithChildren, useEffect, useState } from "react";
 import { bgColor } from "../styles/colors";
 
@@ -38,8 +38,6 @@ const Bubble: React.FC<PropsWithChildren> = ({ children }) => {
     margin-left: 1em;
     margin-right: 1em;
     font-size: ${mobile ? `12px` : `16px`};
-    // margin-top: 0.5em;
-    // margin-bottom: 0;
     h3 {
       font-size: ${mobile ? `24px` : `32px`};
     }
@@ -47,18 +45,7 @@ const Bubble: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <BubbleDiv>
-      {/* <Flex
-        as="main"
-        justifyContent="center"
-        flexDirection="column"
-        px={[0, 4, 4]}
-        mt={[4, 8, 4]}
-        borderRadius={20}
-        ml={5}
-        mr={5}
-      > */}
       <ChildDiv>{children}</ChildDiv>
-      {/* </Flex> */}
     </BubbleDiv>
   );
 };
