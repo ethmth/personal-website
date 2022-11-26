@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { useColorMode, Flex, Stack } from "@chakra-ui/react";
+import { useColorMode, Stack } from "@chakra-ui/react";
 
 import Container from "../src/components/Container";
 
