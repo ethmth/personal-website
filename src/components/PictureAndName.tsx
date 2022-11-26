@@ -1,6 +1,6 @@
 import { Image, Heading, Flex, useColorMode } from "@chakra-ui/react";
 import styled from "@emotion/styled";
-import { bgColor } from "../styles/colors";
+import { bgColor, color } from "../styles/colors";
 import { useState, useEffect } from "react";
 
 const PictureAndName: React.FC = () => {
@@ -30,34 +30,47 @@ const PictureAndName: React.FC = () => {
 
   return (
     <>
-      {/* <Flex> */}
       <Horizontal
-        // flexDirection="row"
         flexDirection={mobile ? "column" : "row"}
         justifyContent="space-between"
         alignItems="center"
-        maxWidth="100%"
+        // maxWidth="100%"
         px={[2, 6, 6]}
         py={2}
-        mt={8}
+        // mt={8}
         mx="auto"
         backgroundColor={bgColor[colorMode]}
-        // backgroundColor="red"
         borderRadius="50"
       >
-        <Heading as="h1" size="4xl" mb={4} mr={10} maxWidth="50%">
+        {/* <Heading as="h1" size="4xl" mb={4} mr={10} maxWidth="50%"> */}
+        <Heading
+          as="h1"
+          size={mobile ? "3xl" : "4xl"}
+          mt={3}
+          mb={3}
+          mr={5}
+          ml={5}
+          maxWidth="50%"
+        >
           Hi, I&apos;m Ethan Thomas
         </Heading>
         <Image
-          ml={10}
+          // ml={10}
           maxWidth="50%"
-          mt={5}
+          // mt={5}
           src="/images/Ethan.jpg"
           alt="A Picture of Me"
+          // mr={2}
+          mb={2}
+          mt={2}
           mr={2}
+          ml={2}
+          borderRadius="5"
+          borderColor={color[colorMode]}
+          borderWidth="2px"
+          borderStyle="solid"
         />
       </Horizontal>
-      {/* </Flex> */}
     </>
   );
 };

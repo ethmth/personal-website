@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
         justifyContent="space-between"
         alignItems="center"
         maxWidth="800px"
-        minWidth="356px"
+        // minWidth="356px"
         width="100%"
         bg={bgColor[colorMode]}
         as="nav"
@@ -36,6 +36,8 @@ const Navbar: React.FC = () => {
         <Box>
           <NextLink href="/" passHref>
             <Button
+              ml={5}
+              mr={5}
               as="a"
               variant="ghost"
               p={[1, 2, 4]}
@@ -47,6 +49,8 @@ const Navbar: React.FC = () => {
           </NextLink>
           <NextLink href="/resume" passHref>
             <Button
+              ml={5}
+              mr={5}
               as="a"
               variant="ghost"
               p={[1, 2, 4]}

@@ -8,11 +8,14 @@ const Bubble: React.FC<PropsWithChildren> = ({ children }) => {
 
   const BubbleDiv = styled.div`
     background-color: ${bgColor[colorMode]};
-    padding-top: 1em;
+    padding-top: 0.5em;
     padding-bottom: 2em;
     margin-top: 1em;
     border-radius: 30px;
     width: 100%;
+    // width: 90%;
+    // margin-right: 5%;
+    // margin-left: 5%;
   `;
 
   return (
@@ -24,6 +27,9 @@ const Bubble: React.FC<PropsWithChildren> = ({ children }) => {
         px={[0, 4, 4]}
         mt={[4, 8, 4]}
         borderRadius={20}
+        ml={5}
+        mr={5}
+        // maxWidth="100%"
       >
         {children}
       </Flex>

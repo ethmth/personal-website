@@ -29,17 +29,17 @@ const Home: NextPage = () => {
           px={2}
           // backgroundColor="yellow"
         >
-          <Flex
+          {/* <Flex
             flexDirection="column"
             justifyContent="flex-start"
             alignItems="flex-start"
             maxWidth="850px"
             // maxWidth="100%"
             // backgroundColor="orange"
-          >
-            <PictureAndName />
-            <Resume />
-          </Flex>
+          > */}
+          <PictureAndName />
+          <Resume />
+          {/* </Flex> */}
         </Stack>
       </Container>
     </>

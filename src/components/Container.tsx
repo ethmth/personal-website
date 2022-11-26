@@ -13,23 +13,23 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
 
   const DivFull = styled.div`
     margin: 0;
-    width: 100%;
-    // background-color: ${bgColor[colorMode]};
-    // background-color=purple
+    width: 100vw;
+    background-color: red;
   `;
 
   const DivSide = styled.div`
     margin-left: 5%;
     margin-right: 5%;
     width: 90%;
-    // background-color=blue
+    background-color: orange;
+    // width: 100%;
   `;
 
   return (
     <DivFull>
       <DivSide>
         <Navbar />
-        <Flex
+        {/* <Flex
           as="main"
           justifyContent="center"
           flexDirection="column"
@@ -38,10 +38,10 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
           px={[0, 4, 4]}
           mt={[4, 8, 8]}
           borderRadius={20}
-          // backgroundColor="green"
         >
           {children}
-        </Flex>
+        </Flex> */}
+        {children}
       </DivSide>
     </DivFull>
   );
