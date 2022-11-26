@@ -5,7 +5,7 @@ export const bgColor = {
 
 export const conColor = {
   light: "#ffffff",
-  dark: "#202020",
+  dark: "#101010",
 };
 
 export const color = {
@@ -16,4 +16,9 @@ export const color = {
 export const navHoverBg = {
   light: "gray.600",
   dark: "gray.300",
+};
+
+export const colorSecondary = {
+  light: "gray.700",
+  dark: "gray.400",
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { useColorMode, Flex } from "@chakra-ui/react";
-import { conColor } from "../styles/colors";
+import { conColor, color } from "../styles/colors";
 
 import styled from "@emotion/styled";
 
@@ -11,14 +11,10 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
   const { colorMode } = useColorMode();
   const bgColor = conColor;
 
-  const color = {
-    light: "black",
-    dark: "white",
-  };
-
   const DivFull = styled.div`
     margin: 0;
     width: 100%;
+    background-color: ${bgColor[colorMode]};
   `;
 
   const DivSide = styled.div`
@@ -30,7 +26,6 @@ const Container: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <DivFull>
       <DivSide>
-        {/* <Navbar light={bgColor.light} dark={bgColor.dark} /> */}
         <Navbar />
         <Flex
           as="main"

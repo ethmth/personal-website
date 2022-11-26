@@ -12,11 +12,6 @@ import PictureAndName from "../src/components/PictureAndName";
 const Home: NextPage = () => {
   const { colorMode } = useColorMode();
 
-  const colorSecondary = {
-    light: "gray.700",
-    dark: "gray.400",
-  };
-
   return (
     <>
       <Container>
@@ -31,14 +26,12 @@ const Home: NextPage = () => {
           m="0 auto 4rem auto"
           maxWidth="850px"
           px={2}
-          // backgroundColor="yellow"
         >
           <Flex
             flexDirection="column"
             justifyContent="flex-start"
             alignItems="flex-start"
             maxWidth="850px"
-            // backgroundColor="purple"
           >
             <PictureAndName />
             <Resume />
