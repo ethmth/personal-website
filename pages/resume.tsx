@@ -9,7 +9,7 @@ import Resume from "../src/components/Resume";
 
 import { useEffect } from "react";
 
-const Home: NextPage = () => {
+const ResumePage: NextPage = () => {
   const { colorMode } = useColorMode();
 
   useEffect(() => {
@@ -52,4 +52,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default ResumePage;
