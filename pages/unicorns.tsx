@@ -10,15 +10,17 @@ const API_URL = "http://localhost:5000/";
 
 const Unicorns: NextPage = () => {
   const resolve = (result: Promise<any>, name: string) => {
-    let ret: string = "3";
+    // const ret: string = "3";
+    // const [ret, setRet] = useState("2");
+    let ret = "1";
 
     new Promise<any>((resolve) => {
       resolve(result);
-    }).then((r) => (ret = r[name]));
-    // }).then((r) => console.log(r[name]));
-    console.log(ret);
+    }).then((r) => (ret = r[name] && console.log(r[name])));
 
-    return ret;
+    // console.log(ret);
+
+    // return ret;
   };
 
   const getScores = async () => {
