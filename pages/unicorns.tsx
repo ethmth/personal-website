@@ -10,22 +10,19 @@ const API_URL = "http://localhost:5000/";
 
 const Unicorns: NextPage = () => {
   const resolve = (result: Promise<any>, name: string) => {
-    // switch(name) {
-    //     case: "blue_name" {
-    //         const mytype = {blue_name}
-    //     }
-    // }
+    let ret: string = "3";
 
-    new Promise<{ blue_score: string }>((resolve) => {
-      // new Promise<{ name: string }>((resolve) => {
+    new Promise<any>((resolve) => {
       resolve(result);
-    }).then((r) => console.log(r.blue_score));
+    }).then((r) => (ret = r[name]));
+    // }).then((r) => console.log(r[name]));
+    console.log(ret);
+
+    return ret;
   };
 
   const getScores = async () => {
-    // console.log("getScores called");
     try {
-      //   console.log("trying fetch");
       const response = await fetch(API_URL, {
         method: "GET",
         headers: {
@@ -37,45 +34,18 @@ const Unicorns: NextPage = () => {
         throw new Error(`Error! status: ${response.status}`);
       }
 
-      //   console.log("response gotten");
-
-      //   const result = await response.json();
-      //   console.log(response);
-
       const result = response.json();
 
-      resolve(result, "blue_score");
+      console.log(resolve(result, "blue_score"));
 
-      //   console.log(typeof result);
-
-      //   console.log("getScores set");
-
-      //   new Promise<{ id: string }>((resolve) => {
-      //     resolve(result);
-      //   }).then((r) => console.log(r.blue_score));
-
-      //   console.log(resolve(result));
-
-      //   console.log(result);
       setScores(JSON.stringify(result, null, 4));
-      //   return JSON.stringify(result, null, 4);
-
-      //   console.log("result is: ", JSON.stringify(result, null, 4));
     } catch {
-      //   console.log("error");
       return "error";
     }
-    // return "error";
   };
 
   const [scores, setScores] = useState("");
   getScores();
-
-  //   fetch(API_URL)
-  //     .then((res) => res.json())
-  //     .then((json) => {
-  //       setScores(json);
-  //     });
 
   return (
     <>
