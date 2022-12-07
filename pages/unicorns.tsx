@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import { useColorMode, Text, Stack } from "@chakra-ui/react";
 import ScoreSquare from "../src/components/unicorns/ScoreSquare";
@@ -8,54 +8,74 @@ import Resume from "../src/components/Resume";
 import { Resolver } from "dns";
 import { resolve } from "path";
 
-const API_URL = "http://localhost:5000/";
+import io from "socket.io-client";
+
+// const API_URL: string = "http://localhost:5000/";
+// const WebSocket = require("ws");
+
+export const isBrowser = typeof window !== "undefined";
 
 const Unicorns: NextPage = () => {
-  let elements: JSX.Element[] = [];
+  const [words, setWords] = useState<string>("");
 
-  let scores = {};
+  // const isBrowser = typeof window !== "undefined";
+  // const [ws] = useState(() => isBrowser ? new WebSocket("ws://" + API_URL + "echo") : null);
 
-  useEffect(() => console.log("First render "), []);
+  // ws.onopen = (event: MessageEvent) => {
+  //   ws.send("Hello jeff");
+  // };
 
-  const getScores = async () => {
-    try {
-      const response = await fetch(API_URL, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
-      if (!response.ok) {
-        throw new Error(`Error! status: ${response.status}`);
-      }
+  // ws.onmessage = function (event: MessageEvent) {
+  //   const data = event.data;
 
-      const result = await response.json();
+  //   setWords(words + data + "\n");
+  // };
 
-      return result;
-    } catch {
-      return "Error!";
-    }
-  };
+  const [wsInstance, setWsInstance] = useState<any>(null);
 
-  const updateScores = async () => {
-    const result = await getScores();
+  /*
+  // Call when updating the ws connection
+  const updateWs = useCallback((url: string) => {
+     if(!isBrowser) return setWsInstance(null);
+     
+     // Close the old connection
+     if(wsInstance != null && wsInstance?.readyState !== 3) {
+       wsInstance.close();
+     }
+  
+     // Create a new connection
+     const newWs = new WebSocket(url);
+     setWsInstance(newWs);
+  }, [wsInstance])
+  */
 
-    for (let score in result) {
-      scores = { ...scores, [score]: result[score] };
-      elements.push(<ScoreSquare team="team" score="1" />);
-    }
-    console.log(scores);
-  };
+  // (Optional) Open a connection on mount
+  // useEffect(() => {
+  //   if(isBrowser) {
+  //     const ws = new WebSocket(API_URL);
+  //     setWsInstance(ws);
+  //   }
 
-  updateScores();
+  //   return () => {
+  //    // Cleanup on unmount if ws wasn't closed already
+  //    if(ws?.readyState !== 3)
+  //     ws.close()
+  //   }
+  //  }, [])
+
+  useEffect(() => {
+    console.log("hello");
+
+    const socket = io("ws://localhost:5000/echo");
+    socket.on("now", (data) => {
+      setWords(data.message);
+    });
+  }, []);
 
   return (
     <>
       <Text>Hello World</Text>
-
-      {/* <ScoreSquare team="red" score={scores["red_score"]} /> */}
-      {elements}
+      <Text>{words}</Text>
     </>
   );
 };
