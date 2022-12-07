@@ -10,10 +10,12 @@ import { resolve } from "path";
 
 const API_URL = "http://localhost:5000/";
 
-const [mysquares, setMysqaures] = useState<JSX.Element[]>([]);
-
 const Unicorns: NextPage = () => {
+  let elements: JSX.Element[] = [];
+
   let scores = {};
+
+  useEffect(() => console.log("First render "), []);
 
   const getScores = async () => {
     try {
@@ -37,21 +39,13 @@ const Unicorns: NextPage = () => {
   };
 
   const updateScores = async () => {
-    let scoreSquares: JSX.Element[] = [];
-
     const result = await getScores();
-    console.log(result);
 
     for (let score in result) {
       scores = { ...scores, [score]: result[score] };
-      scoreSquares.push(<ScoreSquare team="test" score="1" />);
+      elements.push(<ScoreSquare team="team" score="1" />);
     }
     console.log(scores);
-    console.log(scoreSquares);
-
-    // return <div>{scoreSquares[0]}</div>;
-
-    setMysqaures(scoreSquares);
   };
 
   updateScores();
@@ -60,23 +54,8 @@ const Unicorns: NextPage = () => {
     <>
       <Text>Hello World</Text>
 
-      {mysquares}
-
-      {/* {updateScores().map((scoreSquare) => ( */}
-      {/* <div>{scoreSquare}</div> */}
-      {/* ))} */}
-
-      {/* {resolve(updateScores())} */}
-
-      {/* {updateScores().map ? : } */}
-
-      {/* {for(let team in scores) { */}
-
-      {/* // }} */}
-      {/* <ScoreSquare team="bruh" score="1" /> */}
-      {/* {updateScores()} */}
-
-      {/* <Text>Scores {scores}</Text> */}
+      {/* <ScoreSquare team="red" score={scores["red_score"]} /> */}
+      {elements}
     </>
   );
 };

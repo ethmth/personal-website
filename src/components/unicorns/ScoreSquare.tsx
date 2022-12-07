@@ -26,7 +26,7 @@ const ScoreSquare: React.FC<ScoreProps> = (props): JSX.Element => {
     width: 50vw;
     height: 50vh;
     position: absolute;
-    z-index: -1;
+    // z-index: -1;
     text-align: center;
   `;
 
@@ -38,9 +38,6 @@ const ScoreSquare: React.FC<ScoreProps> = (props): JSX.Element => {
       <Heading as="h1" fontSize={"10em"} mt={"10%"}>
         {props.score}
       </Heading>
-      {/* <Text zIndex={5}> */}
-      {/* {props.team}: {props.score} */}
-      {/* </Text> */}
     </ColoredDiv>
   );
 };
