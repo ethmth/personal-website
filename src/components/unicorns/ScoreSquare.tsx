@@ -9,14 +9,34 @@ interface ScoreProps {
 const ScoreSquare: React.FC<ScoreProps> = (props): JSX.Element => {
   const squareColor = () => {
     switch (props.team) {
-      case "red": {
-        return "#ff0000";
+      case "1": {
+        return "red";
       }
-      case "blue": {
-        return "#0000ff";
+      case "2": {
+        return "black";
       }
-      default: {
-        return "#000000";
+      case "3": {
+        return "darkcyan";
+      }
+      case "4": {
+        return "gold";
+      }
+    }
+  };
+
+  const textColor = () => {
+    switch (props.team) {
+      case "1": {
+        return "white";
+      }
+      case "2": {
+        return "white";
+      }
+      case "3": {
+        return "white";
+      }
+      case "4": {
+        return "black";
       }
     }
   };
@@ -25,17 +45,23 @@ const ScoreSquare: React.FC<ScoreProps> = (props): JSX.Element => {
     background-color: ${squareColor};
     width: 50vw;
     height: 50vh;
-    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    // position: relative;
+    // position: absolute;
     // z-index: -1;
     text-align: center;
+    color: ${textColor};
   `;
 
   return (
     <ColoredDiv>
-      <Heading as="h2" mt={"20%"} fontSize={"5em"}>
+      <Heading as="h2" mt={"5%"} fontSize={"4em"}>
         {props.team}
       </Heading>
-      <Heading as="h1" fontSize={"10em"} mt={"10%"}>
+      <Heading as="h1" fontSize={"8em"} mt={"10%"}>
         {props.score}
       </Heading>
     </ColoredDiv>
