@@ -43,10 +43,23 @@ const Unicorns: NextPage = () => {
 
     socket.on("connect", () => {
       console.log("Connected to server!");
+      console.log(socket.id);
     });
 
     socket.on("disconnect", () => {
       console.log("Disconnected from server!");
+    });
+
+    socket.on("message", () => {
+      console.log("Message Received!");
+    });
+
+    socket.on("emit", () => {
+      console.log("emit");
+    });
+
+    socket.on("reconnect", () => {
+      console.log("Reconnected");
     });
 
     socket.emit("hello", "Hello from the client!");
