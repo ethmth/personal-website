@@ -1,4 +1,4 @@
-import { Text, Heading } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 interface ScoreProps {
@@ -10,16 +10,16 @@ const ScoreSquare: React.FC<ScoreProps> = (props): JSX.Element => {
   const squareColor = () => {
     switch (props.team) {
       case "1": {
-        return "red";
+        return "teal";
       }
       case "2": {
-        return "black";
+        return "darkred";
       }
       case "3": {
-        return "darkcyan";
+        return "orange";
       }
       case "4": {
-        return "gold";
+        return "purple";
       }
     }
   };
@@ -36,7 +36,7 @@ const ScoreSquare: React.FC<ScoreProps> = (props): JSX.Element => {
         return "white";
       }
       case "4": {
-        return "black";
+        return "white";
       }
     }
   };
@@ -49,9 +49,6 @@ const ScoreSquare: React.FC<ScoreProps> = (props): JSX.Element => {
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
-    // position: relative;
-    // position: absolute;
-    // z-index: -1;
     text-align: center;
     color: ${textColor};
   `;
