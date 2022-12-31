@@ -1,8 +1,3 @@
-// import { Image, Heading, Flex, Text, useColorMode } from "@chakra-ui/react";
-// import styled from "@emotion/styled";
-// import { bgColor, color } from "../styles/colors";
-// import { useState, useEffect } from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
 
@@ -13,8 +8,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Socials: React.FC = () => {
-  //   const { colorMode } = useColorMode();
-
   const iconSize = "3x";
 
   const IconLink = styled.a`

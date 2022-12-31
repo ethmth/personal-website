@@ -2,23 +2,14 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styled from "@emotion/styled";
 
-import { useColorMode, Text, Stack, Button } from "@chakra-ui/react";
+import { useColorMode, Stack, Button } from "@chakra-ui/react";
 
 import Container from "../src/components/Container";
 
 import Resume from "../src/components/Resume";
 
-// import { useEffect } from "react";
-
 const ResumePage: NextPage = () => {
   const { colorMode } = useColorMode();
-
-  // useEffect(() => {
-  //   window.open(
-  //     "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf",
-  //     "_blank"
-  //   );
-  // });
 
   const StyledLink = styled.a`
     margin-top: 1em;
@@ -40,21 +31,9 @@ const ResumePage: NextPage = () => {
           maxWidth="850px"
           px={2}
         >
-          {/* <Text>To view and download my pdf resume, please click</Text>
-          <Text as="u">
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf"
-            >
-              here
-            </a>
-          </Text> */}
-          {/* <div  align-items="center"> */}
           <StyledLink href="/resume_pdf" target="_blank">
             <Button>View/Download PDF Resume</Button>
           </StyledLink>
-          {/* </div> */}
           <Resume />
         </Stack>
       </Container>
