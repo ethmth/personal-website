@@ -29,7 +29,8 @@ const ResumePage: NextPage = () => {
           as="main"
           spacing={8}
           justifyContent="center"
-          alignItems="flex-start"
+          // alignItems="flex-start"
+          alignItems="center"
           m="0 auto 4rem auto"
           maxWidth="850px"
           px={2}
@@ -44,14 +45,11 @@ const ResumePage: NextPage = () => {
               here
             </a>
           </Text> */}
-          <div>
-            <a
-              href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf"
-              target="_blank"
-            >
-              <Button>View/Download PDF Resume</Button>
-            </a>
-          </div>
+          {/* <div  align-items="center"> */}
+          <a href="/resume_pdf" target="_blank">
+            <Button>View/Download PDF Resume</Button>
+          </a>
+          {/* </div> */}
           <Resume />
         </Stack>
       </Container>
