@@ -9,6 +9,8 @@ import Resume from "../src/components/Resume";
 
 import PictureAndName from "../src/components/PictureAndName";
 
+import Socials from "../src/components/Socials";
+
 const Home: NextPage = () => {
   const { colorMode } = useColorMode();
 
@@ -28,6 +30,7 @@ const Home: NextPage = () => {
           px={2}
         >
           <PictureAndName />
+          <Socials />
           <Resume />
         </Stack>
       </Container>

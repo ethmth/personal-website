@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import styled from "@emotion/styled";
 
 import { useColorMode, Text, Stack, Button } from "@chakra-ui/react";
 
@@ -18,6 +19,10 @@ const ResumePage: NextPage = () => {
   //     "_blank"
   //   );
   // });
+
+  const StyledLink = styled.a`
+    margin-top: 1em;
+  `;
 
   return (
     <>
@@ -46,9 +51,9 @@ const ResumePage: NextPage = () => {
             </a>
           </Text> */}
           {/* <div  align-items="center"> */}
-          <a href="/resume_pdf" target="_blank">
+          <StyledLink href="/resume_pdf" target="_blank">
             <Button>View/Download PDF Resume</Button>
-          </a>
+          </StyledLink>
           {/* </div> */}
           <Resume />
         </Stack>
