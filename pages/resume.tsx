@@ -1,24 +1,23 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { useColorMode, Text, Stack } from "@chakra-ui/react";
+import { useColorMode, Text, Stack, Button } from "@chakra-ui/react";
 
 import Container from "../src/components/Container";
 
 import Resume from "../src/components/Resume";
 
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 const ResumePage: NextPage = () => {
   const { colorMode } = useColorMode();
 
-  useEffect(() => {
-    window.open(
-      "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf",
-      "_blank"
-    );
-    // window.location.href = "/";
-  });
+  // useEffect(() => {
+  //   window.open(
+  //     "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf",
+  //     "_blank"
+  //   );
+  // });
 
   return (
     <>
@@ -35,7 +34,7 @@ const ResumePage: NextPage = () => {
           maxWidth="850px"
           px={2}
         >
-          <Text>To view and download my pdf resume, please click</Text>
+          {/* <Text>To view and download my pdf resume, please click</Text>
           <Text as="u">
             <a
               target="_blank"
@@ -44,7 +43,15 @@ const ResumePage: NextPage = () => {
             >
               here
             </a>
-          </Text>
+          </Text> */}
+          <div>
+            <a
+              href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf"
+              target="_blank"
+            >
+              <Button>View/Download PDF Resume</Button>
+            </a>
+          </div>
           <Resume />
         </Stack>
       </Container>
