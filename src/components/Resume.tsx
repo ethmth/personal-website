@@ -27,14 +27,20 @@ import React from "react";
 
 import Bubble from "./Bubble";
 
+import styled from "@emotion/styled";
+
 const Resume: React.FC = () => {
+  const LinkUnderline = styled(Link)`
+    text-decoration: underline;
+  `;
+
   return (
     <>
       <Bubble>
         <Heading as="h3">Objective</Heading>
         <Text>
-          Student passionate for Linux, automation using Bash and Python, and
-          Front-end Development.
+          Student who is passionate about Linux, automation using Bash and
+          Python, and front-end development.
         </Text>
         <Text>Seeking a Summer 2023 Software Engineering internship.</Text>
       </Bubble>
@@ -49,12 +55,12 @@ const Resume: React.FC = () => {
           Algebra, Discrete Math
         </Text>
         <Text>
-          Member of Columbia Space Initiative - 2023 NASA Micro-g NExT
-          Competition Team Member
+          Member of Columbia Space Initiative (CSI) - 2023 NASA Micro-g NExT
+          Competition team member
         </Text>
         <Text>
-          Member of the Application Development Initiative - DevFest (Hackathon)
-          Organizing Committee
+          Member of the Application Development Initiative (ADI) - DevFest
+          (Hackathon) organizing committee
         </Text>
       </Bubble>
 
@@ -81,14 +87,15 @@ const Resume: React.FC = () => {
                 <strong>Technical Skills</strong>
               </Td>
               <Td>
-                Linux, Docker, Bash, Latex, HTML, CSS, Git, CAD (Solidworks)
+                Linux, Docker, Bash, LaTeX, HTML, CSS, Git, CAD (Solidworks),
+                Virtual Machines
               </Td>
             </Tr>
             <Tr className="even">
               <Td>
                 <strong>Soft Skills</strong>
               </Td>
-              <Td>Communication, Leadership, Organization</Td>
+              <Td>Patience, Curiosity, Organization, Communication</Td>
             </Tr>
           </Tbody>
         </Table>
@@ -104,12 +111,8 @@ const Resume: React.FC = () => {
         <UnorderedList>
           <ListItem>
             <Text>
-              Developed proof-of-concept web UI that allowed coaches and players
-              to visualize catcher framing data using ReactJS and R.  
-              <Link href="https://gu-baseball.herokuapp.com/catcher_framing">
-                gu-baseball.herokuapp.com/catcher_framing
-              </Link>
-              (Dummy data; API loading times may vary).
+              Developed web UI that allowed coaches and players to visualize
+              catcher framing data using ReactJS and R.
             </Text>
           </ListItem>
           <ListItem>
@@ -143,33 +146,58 @@ const Resume: React.FC = () => {
       <Bubble>
         <Heading as="h3">Projects</Heading>
         <Text>
-          <span>
-            All projects available on my GitHub. These are personal projects,
-            but I&apos;ve done C, C++, and Java projects in class.
-          </span>
+          Personal projects available on{" "}
+          <LinkUnderline href="https://github.com/ethmth/" target="_blank">
+            GitHub
+          </LinkUnderline>
+          .
         </Text>
         <Text>
-          <strong>Seatgeek Scanner.</strong>
-          <span>
-            Built a tool to continuously search for tickets that fall below a
-            target price within a date range for any given show on Seatgeek.
-            Integrates with IFTTT webhooks. Uses Python, Selenium, and Docker.
-          </span>
+          <strong>
+            <LinkUnderline
+              href="https://github.com/ethmth/seatgeek-scanner"
+              target="_blank"
+            >
+              Seatgeek Scanner
+            </LinkUnderline>
+            .
+          </strong>{" "}
+          Built a tool to continuously search for tickets that fall below a
+          target price within a date range for any given show on Seatgeek.
+          Integrates with IFTTT webhooks. Uses Python, Selenium, and Docker.
         </Text>
         <Text>
-          <strong>Auto-YouTuber.</strong>
-          <span>
-            Built a tool that creates and uploads daily YouTube videos by
-            scraping top posts from reddit and compiling them into a
-            compilation. Uses Bash, Python, ffmpeg, and Docker.
-          </span>
+          <strong>
+            <LinkUnderline
+              href="https://github.com/ethmth/auto-youtuber"
+              target="_blank"
+            >
+              Auto-YouTuber
+            </LinkUnderline>
+            .
+          </strong>{" "}
+          Built a tool that creates and uploads daily YouTube videos by scraping
+          top posts from Reddit, compiling them into a full-length video, and
+          uploading to YouTube completely autonomously. Uses Bash, Python,
+          FFmpeg, and Docker.
         </Text>
         <Text>
-          <strong>ThingM Blink1 API.</strong>
-          <span>
-            Built a simple Rest API for the ThingM Blink1 Device that allows for
-            network control using Python, Flask, and Docker.
-          </span>
+          <strong>
+            <LinkUnderline
+              href="https://github.com/ethmth/thingm-blink-api"
+              target="_blank"
+            >
+              ThingM Blink1 API
+            </LinkUnderline>
+            .
+          </strong>{" "}
+          Built an API using Python, Flask, and Docker for the ThingM Blink1,
+          allowing for network control.
+        </Text>
+        <Text>
+          <strong>C Web Server</strong> (Class Project)<strong>.</strong> Built
+          a dynamic HTTP/1.0 Server in C that serves static files and entries
+          from a database.
         </Text>
       </Bubble>
       <Bubble>
@@ -177,12 +205,22 @@ const Resume: React.FC = () => {
         <UnorderedList>
           <ListItem>
             <Text>
-              Use Computer Aided Design Software (Solidworks) to design and 3D
-              print parts for personal and class projects.
+              Volunteer tutoring in math up to Calculus II through Mu Alpha
+              Theta, Schoolhouse.World, and Hatch Tutors.
             </Text>
           </ListItem>
           <ListItem>
-            <Text>Create music using DAW Software (Ardour).</Text>
+            <Text>
+              Create personal projects in the Columbia Engineering Makerspace by
+              3D printing models and laser cutting parts designed using
+              Solidworks.
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text>
+              Interests: Minecraft Mod Development, Musical Theater, Baseball,
+              Reviewing Films, and Tinkering with Linux.
+            </Text>
           </ListItem>
         </UnorderedList>
       </Bubble>
@@ -197,10 +235,11 @@ const Resume: React.FC = () => {
           </ListItem>
           <ListItem>
             <Text>
-              Leader of my Art of Engineering Common Project group, which is
-              currently creating a “Smart” Hungry-Hungry Hippos game that uses a
-              microcontroller to keep count of score, and shoot marbles back
-              into the field of play.
+              Leader of Art of Engineering Common Project group, which created a
+              “Smart” Hungry-Hungry Hippos game.
+              <br />
+              The game uses an Arduino Microcontroller, beam-break sensors, and
+              push-pull servos.
             </Text>
           </ListItem>
         </UnorderedList>

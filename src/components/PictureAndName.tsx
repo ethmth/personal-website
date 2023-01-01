@@ -21,7 +21,7 @@ const PictureAndName: React.FC = () => {
 
   useEffect(() => {
     function handleResize() {
-      console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
+      // console.log("resized to: ", window.innerWidth, "x", window.innerHeight);
       setMobile(isClientMobile());
     }
 
