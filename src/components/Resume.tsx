@@ -48,20 +48,28 @@ const Resume: React.FC = () => {
         <Heading as="h3">Education</Heading>
         <Text>
           <strong>Bachelor of Computer Science (B.S.)</strong>, Columbia
-          University (SEAS)
+          University (SEAS) - Class of 2025
         </Text>
-        <Text>
-          Relevant Coursework: Data Structures, Advanced Programming, Linear
-          Algebra, Discrete Math
-        </Text>
-        <Text>
-          Member of Columbia Space Initiative (CSI) - 2023 NASA Micro-g NExT
-          Competition team member
-        </Text>
-        <Text>
-          Member of the Application Development Initiative (ADI) - DevFest
-          (Hackathon) organizing committee
-        </Text>
+        <UnorderedList>
+          <ListItem>
+            <Text>
+              Relevant Coursework: Data Structures, Advanced Programming, Linear
+              Algebra, Discrete Math
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text>
+              Member of Columbia Space Initiative (CSI) - 2023 NASA Micro-g NExT
+              Competition team member
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text>
+              Member of the Application Development Initiative (ADI) - DevFest
+              (Hackathon) organizing committee
+            </Text>
+          </ListItem>
+        </UnorderedList>
       </Bubble>
 
       <Bubble>
@@ -152,53 +160,63 @@ const Resume: React.FC = () => {
           </LinkUnderline>
           .
         </Text>
-        <Text>
-          <strong>
-            <LinkUnderline
-              href="https://github.com/ethmth/seatgeek-scanner"
-              target="_blank"
-            >
-              Seatgeek Scanner
-            </LinkUnderline>
-            .
-          </strong>{" "}
-          Built a tool to continuously search for tickets that fall below a
-          target price within a date range for any given show on Seatgeek.
-          Integrates with IFTTT webhooks. Uses Python, Selenium, and Docker.
-        </Text>
-        <Text>
-          <strong>
-            <LinkUnderline
-              href="https://github.com/ethmth/auto-youtuber"
-              target="_blank"
-            >
-              Auto-YouTuber
-            </LinkUnderline>
-            .
-          </strong>{" "}
-          Built a tool that creates and uploads daily YouTube videos by scraping
-          top posts from Reddit, compiling them into a full-length video, and
-          uploading to YouTube completely autonomously. Uses Bash, Python,
-          FFmpeg, and Docker.
-        </Text>
-        <Text>
-          <strong>
-            <LinkUnderline
-              href="https://github.com/ethmth/thingm-blink-api"
-              target="_blank"
-            >
-              ThingM Blink1 API
-            </LinkUnderline>
-            .
-          </strong>{" "}
-          Built an API using Python, Flask, and Docker for the ThingM Blink1,
-          allowing for network control.
-        </Text>
-        <Text>
-          <strong>C Web Server</strong> (Class Project)<strong>.</strong> Built
-          a dynamic HTTP/1.0 Server in C that serves static files and entries
-          from a database.
-        </Text>
+        <UnorderedList>
+          <ListItem>
+            <Text>
+              <strong>
+                <LinkUnderline
+                  href="https://github.com/ethmth/seatgeek-scanner"
+                  target="_blank"
+                >
+                  Seatgeek Scanner
+                </LinkUnderline>
+                .
+              </strong>{" "}
+              Built a tool to continuously search for tickets that fall below a
+              target price within a date range for any given show on Seatgeek.
+              Integrates with IFTTT webhooks. Uses Python, Selenium, and Docker.
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text>
+              <strong>
+                <LinkUnderline
+                  href="https://github.com/ethmth/auto-youtuber"
+                  target="_blank"
+                >
+                  Auto-YouTuber
+                </LinkUnderline>
+                .
+              </strong>{" "}
+              Built a tool that creates and uploads daily YouTube videos by
+              scraping top posts from Reddit, compiling them into a full-length
+              video, and uploading to YouTube completely autonomously. Uses
+              Bash, Python, FFmpeg, and Docker.
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text>
+              <strong>
+                <LinkUnderline
+                  href="https://github.com/ethmth/thingm-blink-api"
+                  target="_blank"
+                >
+                  ThingM Blink1 API
+                </LinkUnderline>
+                .
+              </strong>{" "}
+              Built an API using Python, Flask, and Docker for the ThingM
+              Blink1, allowing for network control.
+            </Text>
+          </ListItem>
+          <ListItem>
+            <Text>
+              <strong>C Web Server</strong> (Class Project)<strong>.</strong>{" "}
+              Built a dynamic HTTP/1.0 Server in C that serves static files and
+              entries from a database.
+            </Text>
+          </ListItem>
+        </UnorderedList>
       </Bubble>
       <Bubble>
         <Heading as="h3">Extra-Curricular Activities</Heading>

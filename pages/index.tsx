@@ -4,11 +4,7 @@ import Head from "next/head";
 import { useColorMode, Stack } from "@chakra-ui/react";
 
 import Container from "../src/components/Container";
-
-import Resume from "../src/components/Resume";
-
 import PictureAndName from "../src/components/PictureAndName";
-
 import Socials from "../src/components/Socials";
 
 const Home: NextPage = () => {
@@ -31,7 +27,6 @@ const Home: NextPage = () => {
         >
           <PictureAndName />
           <Socials />
-          <Resume />
         </Stack>
       </Container>
     </>

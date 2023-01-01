@@ -25,7 +25,6 @@ const ResumePage: NextPage = () => {
           as="main"
           spacing={8}
           justifyContent="center"
-          // alignItems="flex-start"
           alignItems="center"
           m="0 auto 4rem auto"
           maxWidth="850px"
