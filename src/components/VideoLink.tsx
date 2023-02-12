@@ -70,8 +70,8 @@ const VideoLink: React.FC<VideoLinkProps> = (props) => {
         />
         <div>
           <TagsDiv>
-            {props.tags?.map((tag) => (
-              <TagsSpan>{tag}</TagsSpan>
+            {props.tags?.map((tag, key) => (
+              <TagsSpan key={key}>{tag}</TagsSpan>
             ))}
           </TagsDiv>
 
