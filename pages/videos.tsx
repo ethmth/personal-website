@@ -25,7 +25,7 @@ const VideosPage: NextPage = () => {
             title="Beating #1 Badlion PvPer"
             thumbnail="/images/thumbnails/tylarzz.webp"
             href="https://odysee.com/Killing-Tylarzz:b"
-            tags={["Minecraft", "Gaming"]}
+            tags={["Odysee", "Gaming", "Minecraft"]}
           >
             The time I beat the #1 Minecraft PvPer at the time.
           </VideoLink>
