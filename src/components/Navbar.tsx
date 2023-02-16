@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
         mx="auto"
         borderRadius={20}
       >
-        <Box>
+        {/* <Box>
           <NextLink href="/" passHref>
             <Button
               ml={5}
@@ -59,7 +59,8 @@ const Navbar: React.FC = () => {
               Resume
             </Button>
           </NextLink>
-        </Box>
+        </Box> */}
+        <h1>Hi</h1>
         <DarkModeSwitch />
       </StickNav>
     </>
