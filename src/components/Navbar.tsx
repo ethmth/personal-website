@@ -32,35 +32,34 @@ const Navbar: React.FC = () => {
         mx="auto"
         borderRadius={20}
       >
-        {/* <Box>
-          <NextLink href="/" passHref>
-            <Button
-              ml={5}
-              mr={5}
-              as="a"
-              variant="ghost"
-              p={[1, 2, 4]}
-              _hover={{ backgroundColor: navHoverBg[colorMode] }}
-              color={color[colorMode]}
-            >
-              Home
-            </Button>
-          </NextLink>
-          <NextLink href="/resume" passHref>
-            <Button
-              ml={5}
-              mr={5}
-              as="a"
-              variant="ghost"
-              p={[1, 2, 4]}
-              _hover={{ backgroundColor: navHoverBg[colorMode] }}
-              color={color[colorMode]}
-            >
-              Resume
-            </Button>
-          </NextLink>
-        </Box> */}
-        <h1>Hi</h1>
+        <Box>
+          {/* <NextLink href="/" passHref> */}
+          <Button
+            ml={5}
+            mr={5}
+            as="a"
+            variant="ghost"
+            p={[1, 2, 4]}
+            _hover={{ backgroundColor: navHoverBg[colorMode] }}
+            color={color[colorMode]}
+          >
+            Home
+          </Button>
+          {/* </NextLink> */}
+          {/* <NextLink href="/resume" passHref> */}
+          <Button
+            ml={5}
+            mr={5}
+            as="a"
+            variant="ghost"
+            p={[1, 2, 4]}
+            _hover={{ backgroundColor: navHoverBg[colorMode] }}
+            color={color[colorMode]}
+          >
+            Resume
+          </Button>
+          {/* </NextLink> */}
+        </Box>
         <DarkModeSwitch />
       </StickNav>
     </>
