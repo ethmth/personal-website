@@ -35,7 +35,6 @@ const Navbar: React.FC = () => {
         <Box>
           <NextLink href="/" passHref>
             <Button
-              // as={NextLink}
               ml={5}
               mr={5}
               variant="ghost"
@@ -47,20 +46,16 @@ const Navbar: React.FC = () => {
             </Button>
           </NextLink>
           <NextLink href="/resume" passHref>
-            {/* <a href="resume"> */}
-            {/* <Button
+            <Button
               ml={5}
               mr={5}
-              as="a"
               variant="ghost"
               p={[1, 2, 4]}
               _hover={{ backgroundColor: navHoverBg[colorMode] }}
               color={color[colorMode]}
             >
               Resume
-            </Button> */}
-            <h1>Resume</h1>
-            {/* </a> */}
+            </Button>
           </NextLink>
         </Box>
         <DarkModeSwitch />
