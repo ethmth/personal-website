@@ -1,27 +1,53 @@
 import { NextPage } from "next";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+// import ReactMarkdown from "react-markdown";
+// import remarkGfm from "remark-gfm";
+import md from "markdown-it";
+import fs from "fs";
+import matter from "gray-matter";
 
-const FirebasePage: NextPage = () => {
-  const markdown = `A paragraph with *emphasis* and **strong importance**.
+function getStaticProps() {
+  const fileName = fs.readFileSync(`public/firebase.md`, "utf-8");
 
-> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
+  const { data: frontmatter, content } = matter(fileName);
+  //   const content = matter(fileName);
 
-* Lists
-* [ ] todo
-* [x] done
+  // cont = content;
+  console.log("in static props; content is ");
+  console.log({ data: frontmatter, content });
 
-## WHAT
+  return {
+    props: {
+      frontmatter,
+      content,
+    },
+    // content,
+  };
+}
 
-A table:
+const FirebasePage: NextPage = (frontmatter: any, content: string) => {
+  //   const content = `
+  //     # Test page content
+  //     What the *heck*
 
-| a | b |
-| - | - |
-`;
+  //     <h1>Hi</h1>
+  //     `;
+
+  //   let cont = getStaticProps().props.content;
+
+  //   const fileName = fs.readFileSync(`/public/firebase.md`, "utf-8");
+
+  //   const { data: frontmatter, content } = matter(fileName);
+
   return (
-    <div>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
-    </div>
+    <>
+      <h1>{content}</h1>
+      <div
+        className="prose lg:prose-xl"
+        // dangerouslySetInnerHTML={{
+        //   __html: md.render(content),
+        // }}
+      />
+    </>
   );
 };
 
