@@ -15,6 +15,12 @@ const nextConfig = {
         destination: "https://github.com/ethmth/devfest-23-firebase",
         permanent: true,
       },
+      {
+        source: "/scooter-data",
+        destination:
+          "https://raw.githubusercontent.com/ethmth/e-scooter-data/main/data/labeled.csv",
+        permanent: true,
+      },
     ];
   },
 };
