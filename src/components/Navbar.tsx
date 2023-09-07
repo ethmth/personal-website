@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
               Home
             </Button>
           </NextLink>
-          <NextLink href="/resume" passHref>
+          {/* <NextLink href="/resume" passHref>
             <Button
               ml={5}
               mr={5}
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
             >
               Resume
             </Button>
-          </NextLink>
+          </NextLink> */}
         </Box>
         <DarkModeSwitch />
       </StickNav>
