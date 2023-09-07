@@ -34,7 +34,7 @@ const Bubble: React.FC<PropsWithChildren> = ({ children }) => {
     border-radius: 30px;
     width: 100%;
 
-    font-size: ${mobile ? `12px` : `16px`};
+    font-size: ${mobile ? `16px` : `24px`};
     h3 {
       font-size: ${mobile ? `24px` : `32px`};
     }

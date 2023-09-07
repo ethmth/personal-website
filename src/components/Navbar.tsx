@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { useColorMode, Button, Flex, Box } from "@chakra-ui/react";
+import { useColorMode, Button, Flex, Box, Heading } from "@chakra-ui/react";
 import NextLink from "next/link";
 import DarkModeSwitch from "../components/DarkModeSwitch";
 import { bgColor, navHoverBg, color } from "../styles/colors";
@@ -58,6 +58,9 @@ const Navbar: React.FC = () => {
             </Button>
           </NextLink> */}
         </Box>
+        {/* <Heading as="h6" size="s">
+          ethan@smaze.net
+        </Heading> */}
         <DarkModeSwitch />
       </StickNav>
     </>

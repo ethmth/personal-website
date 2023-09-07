@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styled from "@emotion/styled";
 
-
 import { useColorMode, Stack, Button } from "@chakra-ui/react";
 
 import Container from "../src/components/Container";
 import PictureAndName from "../src/components/PictureAndName";
 import Socials from "../src/components/Socials";
+import Bubble from "../src/components/Bubble";
 
 const Home: NextPage = () => {
   const { colorMode } = useColorMode();
@@ -32,11 +32,12 @@ const Home: NextPage = () => {
           px={2}
         >
           <PictureAndName />
-
-          {/* <StyledLink href="/resume_pdf" target="_blank">
-            <Button>Resume</Button>
-          </StyledLink> */}
           <Socials />
+          {/* <Bubble>
+            I'm a student at Columbia University graduating in May of 2025. I'm
+            currently seeking a Software Engineering internship. Please check
+            out my resume!
+          </Bubble> */}
         </Stack>
       </Container>
     </>

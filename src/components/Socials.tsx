@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
+import { useState, useEffect } from "react";
 
 import { Button } from "@chakra-ui/react";
 
@@ -9,56 +10,81 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-import { faFile } from '@fortawesome/free-regular-svg-icons';
+import { faFile } from "@fortawesome/free-regular-svg-icons";
 
 const Socials: React.FC = () => {
   const iconSize = "2x";
+
+  const maxWidth = "650px";
+
+  const isClientMobile = () => {
+    return typeof window !== "undefined" &&
+      window.matchMedia(`(max-width: ${maxWidth})`).matches
+      ? true
+      : false;
+  };
+  const [mobile, setMobile] = useState(isClientMobile());
+
+  useEffect(() => {
+    function handleResize() {
+      setMobile(isClientMobile());
+    }
+
+    window.addEventListener("resize", handleResize);
+  });
+
+  const IconDiv = styled.div`
+    display: flex;
+    flex-direction: ${mobile ? "column" : "row"};
+    align-items: center;
+    justify-content: center;
+  `;
 
   const IconLink = styled.a`
     margin-left: 1em;
     margin-right: 1em;
   `;
 
-  //   const StyledLink = styled.a`
-  //   margin-top: 1em;
-  // `;
-
   const StyledButton = styled(Button)`
-margin-top: 1em;
-`
+    margin-top: 1em;
+  `;
 
   return (
-    <div>
-      {/* <StyledLink href="/resume_pdf" target="_blank">
-        <Button>Resume</Button>
-        <FontAwesomeIcon icon={faGithub} size={iconSize} />
-
-      </StyledLink> */}
+    <IconDiv>
+      <IconLink href="https://www.linkedin.com/in/ethanmt/" target="_blank">
+        <StyledButton
+          onCLick={void 0}
+          leftIcon={<FontAwesomeIcon icon={faLinkedin} size={iconSize} />}
+          colorScheme="linkedin"
+          variant="solid"
+          size="lg"
+        >
+          LinkedIn
+        </StyledButton>
+      </IconLink>
       <IconLink href="/resume_pdf" target="_blank">
-        <StyledButton onCLick={(void (0))} leftIcon={<FontAwesomeIcon icon={faFile} size={iconSize} />} colorScheme='blue' variant='solid' size='lg'>
+        <StyledButton
+          onCLick={void 0}
+          leftIcon={<FontAwesomeIcon icon={faFile} size={iconSize} />}
+          colorScheme="blue"
+          variant="solid"
+          size="lg"
+        >
           Resume
         </StyledButton>
       </IconLink>
       <IconLink href="https://github.com/ethmth" target="_blank">
-        <StyledButton onCLick={(void (0))} leftIcon={<FontAwesomeIcon icon={faGithub} size={iconSize} />} colorScheme='teal' variant='solid' size='lg'>
+        <StyledButton
+          onCLick={void 0}
+          leftIcon={<FontAwesomeIcon icon={faGithub} size={iconSize} />}
+          colorScheme="teal"
+          variant="solid"
+          size="lg"
+        >
           Github
         </StyledButton>
       </IconLink>
-      <IconLink href="https://www.linkedin.com/in/ethanmt/" target="_blank">
-        <StyledButton onCLick={(void (0))} leftIcon={<FontAwesomeIcon icon={faLinkedin} size={iconSize} />} colorScheme='linkedin' variant='solid' size='lg'>
-          LinkedIn
-        </StyledButton>
-      </IconLink>
-      {/* <IconLink href="https://github.com/ethmth" target="_blank">
-        <FontAwesomeIcon icon={faGithub} size={iconSize} />
-      </IconLink>
-      <IconLink href="https://www.linkedin.com/in/ethanmt/" target="_blank">
-        <FontAwesomeIcon icon={faLinkedin} size={iconSize} />
-      </IconLink>
-      <IconLink href="https://hub.docker.com/u/ethmth" target="_blank">
-        <FontAwesomeIcon icon={faDocker} size={iconSize} />
-      </IconLink> */}
-    </div>
+    </IconDiv>
   );
 };
 
