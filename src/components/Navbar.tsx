@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
               Home
             </Button>
           </NextLink>
-          {/* <NextLink href="/resume" passHref>
+          <NextLink href="https://blog.ethanmt.com/" passHref>
             <Button
               ml={5}
               mr={5}
@@ -54,9 +54,24 @@ const Navbar: React.FC = () => {
               _hover={{ backgroundColor: navHoverBg[colorMode] }}
               color={color[colorMode]}
             >
-              Resume
+              Blog&nbsp;
+              <svg
+                fill="none"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewBox="0 0 24 24"
+                height="12"
+                width="12"
+              >
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                <path d="M15 3h6v6"></path>
+                <path d="M10 14L21 3"></path>
+              </svg>
             </Button>
-          </NextLink> */}
+          </NextLink>
         </Box>
         {/* <Heading as="h6" size="s">
           ethan@smaze.net
