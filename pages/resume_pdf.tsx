@@ -1,14 +1,13 @@
-import type { NextPage } from "next";
-import styled from "@emotion/styled";
+import NoSsr from "../src/components/NoSsr";
 
-const IFrame = styled.iframe`
-  width: 100vw;
-  height: 100vh;
-`;
+import type { NextPage } from "next";
+import PDFDisplay from "../src/components/PDFDisplay";
 
 const ResumePDFPage: NextPage = () => {
   return (
-    <IFrame src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf&embedded=true"></IFrame>
+    <NoSsr>
+      <PDFDisplay file="https://raw.githubusercontent.com/ethmth/resume/main/EthanThomasResume.pdf" />
+    </NoSsr>
   );
 };
 
