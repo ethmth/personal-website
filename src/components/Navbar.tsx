@@ -57,11 +57,11 @@ const Navbar: React.FC = () => {
               Blog&nbsp;
               <svg
                 fill="none"
-                shape-rendering="geometricPrecision"
+                shapeRendering="geometricPrecision"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2.5"
                 viewBox="0 0 24 24"
                 height="12"
                 width="12"

@@ -53,7 +53,7 @@ const Socials: React.FC = () => {
     <IconDiv>
       <IconLink href="https://www.linkedin.com/in/ethanmt/" target="_blank">
         <StyledButton
-          onCLick={void 0}
+          onClick={void 0}
           leftIcon={<FontAwesomeIcon icon={faLinkedin} size={iconSize} />}
           colorScheme="linkedin"
           variant="solid"
@@ -64,7 +64,7 @@ const Socials: React.FC = () => {
       </IconLink>
       <IconLink href="/resume_pdf" target="_blank">
         <StyledButton
-          onCLick={void 0}
+          onClick={void 0}
           leftIcon={<FontAwesomeIcon icon={faFile} size={iconSize} />}
           colorScheme="blue"
           variant="solid"
@@ -75,7 +75,7 @@ const Socials: React.FC = () => {
       </IconLink>
       <IconLink href="https://github.com/ethmth" target="_blank">
         <StyledButton
-          onCLick={void 0}
+          onClick={void 0}
           leftIcon={<FontAwesomeIcon icon={faGithub} size={iconSize} />}
           colorScheme="teal"
           variant="solid"
