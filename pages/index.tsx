@@ -8,6 +8,7 @@ import Container from "../src/components/Container";
 import PictureAndName from "../src/components/PictureAndName";
 import Socials from "../src/components/Socials";
 import Bubble from "../src/components/Bubble";
+import PGPKey from "../src/components/PGPKey";
 
 const Home: NextPage = () => {
   const { colorMode } = useColorMode();
@@ -38,6 +39,7 @@ const Home: NextPage = () => {
             currently seeking a Software Engineering internship. Please check
             out my resume!
           </Bubble> */}
+          <PGPKey />
         </Stack>
       </Container>
     </>
