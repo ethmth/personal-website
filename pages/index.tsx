@@ -39,7 +39,7 @@ const Home: NextPage = () => {
             currently seeking a Software Engineering internship. Please check
             out my resume!
           </Bubble> */}
-          <PGPKey />
+          {/* <PGPKey /> */}
         </Stack>
       </Container>
     </>

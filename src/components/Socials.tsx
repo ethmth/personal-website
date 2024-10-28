@@ -55,24 +55,36 @@ const Socials: React.FC = () => {
         <StyledButton
           onClick={void 0}
           leftIcon={<FontAwesomeIcon icon={faLinkedin} size={iconSize} />}
-          colorScheme="linkedin"
+          colorScheme="blue"
           variant="solid"
           size="lg"
         >
           LinkedIn
         </StyledButton>
       </IconLink>
-      <IconLink href="/resume_pdf" target="_blank">
+      {/* <IconLink href="https://www.linkedin.com/in/ethanmt/" target="_blank">
+        <StyledButton
+          onClick={void 0}
+          leftIcon={<FontAwesomeIcon icon={faLinkedin} size={iconSize} />}
+          colorScheme="blue"
+          variant="solid"
+          size="lg"
+        >
+          Github
+        </StyledButton>
+      </IconLink> */}
+      <IconLink href="/reactive_resume" target="_blank">
         <StyledButton
           onClick={void 0}
           leftIcon={<FontAwesomeIcon icon={faFile} size={iconSize} />}
-          colorScheme="blue"
+          colorScheme="gray"
           variant="solid"
           size="lg"
         >
           Resume
         </StyledButton>
       </IconLink>
+
       <IconLink href="https://github.com/ethmth" target="_blank">
         <StyledButton
           onClick={void 0}
