@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
               Home
             </Button>
           </NextLink>
-          <NextLink href="https://blog.ethanmt.com/" passHref>
+          {/* <NextLink href="https://blog.ethanmt.com/" passHref>
             <Button
               ml={5}
               mr={5}
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                 <path d="M10 14L21 3"></path>
               </svg>
             </Button>
-          </NextLink>
+          </NextLink> */}
         </Box>
         {/* <Heading as="h6" size="s">
           ethan@smaze.net
